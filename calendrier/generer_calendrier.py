@@ -3,7 +3,7 @@
 import json, datetime as dt, calendar, html, pathlib
 
 HERE = pathlib.Path(__file__).parent
-data = json.load(open(HERE / 'data.json'))
+data = json.load(open(HERE / "data.json"))
 iso = dt.date.fromisoformat
 cours = {iso(d) for d in data["cours"]}
 grid = {iso(d) for d in data["grid"]}
@@ -86,28 +86,6 @@ carte_vac.append(
     '</div></div>')
 carte_vac = "".join(carte_vac)
 
-# ---------- Page 2 : rythme de l’année ----------
-alt = []
-for i, (a, b, n) in enumerate(blocs):
-    alt.append(f'<div class="p p-cours"><div class="p-k">Période {i+1}</div>'
-               f'<div class="p-d">{fr(a, True)} &nbsp;&rarr;&nbsp; {fr(b, True)}</div>'
-               f'<div class="p-n">{n} jours</div></div>')
-    if i < len(vac):
-        va, vb = vac[i]
-        alt.append(f'<div class="p p-vac"><div class="p-k">{NOMS_VAC[i]}</div>'
-                   f'<div class="p-d">{fr(va, True)} &nbsp;&rarr;&nbsp; {fr(vb, True)}</div>'
-                   f'<div class="p-n">{(vb-va).days+1} jours</div></div>')
-alt = "".join(alt)
-
-lignes_sem = []
-for i, (l, a, b, n) in enumerate(sem, 1):
-    part = "" if n == 6 else " s-part"
-    lignes_sem.append(
-        f'<li class="s{part}"><span class="s-n">{i:02d}</span>'
-        f'<span class="s-d">{a.day:02d}/{a.month:02d} &ndash; {b.day:02d}/{b.month:02d}</span>'
-        f'<span class="s-j">{n} j</span></li>')
-lignes_sem = "".join(lignes_sem)
-
 CSS = """
 :root{
   --ink:#161a20; --ink-2:#4a525e; --ink-3:#8b93a1;
@@ -119,8 +97,7 @@ CSS = """
 body{font-family:"Liberation Sans","Helvetica Neue",Arial,"DejaVu Sans",sans-serif;
   color:var(--ink);background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:210mm;height:297mm;padding:13mm 14mm 10mm;display:flex;flex-direction:column;
-  page-break-after:always;overflow:hidden}
-.page:last-child{page-break-after:auto}
+  overflow:hidden}
 
 /* ---- en-tête ---- */
 .hd{border-bottom:1.6pt solid var(--ink);padding-bottom:3.2mm;margin-bottom:4mm;
@@ -190,31 +167,6 @@ body{font-family:"Liberation Sans","Helvetica Neue",Arial,"DejaVu Sans",sans-ser
   color:#9c7247;line-height:1.55;display:flex;flex-direction:column;gap:.6mm}
 .i-f b{color:var(--vac);font-weight:700}
 
-/* ---- page 2 ---- */
-.h2{font-family:"Bitstream Charter","Liberation Serif",Georgia,serif;font-size:14pt;
-  font-weight:700;letter-spacing:-.01em;margin-bottom:1mm}
-.h2-s{font-size:8pt;color:var(--ink-2);margin-bottom:3.2mm}
-.sec{margin-bottom:7mm}
-.rythme{display:flex;flex-direction:column;gap:1.5mm}
-.p{display:flex;align-items:baseline;gap:3mm;padding:3.1mm 3.4mm;border-radius:1.4mm}
-.p-cours{background:var(--acc-soft);color:var(--acc)}
-.p-vac{background:var(--vac-soft);color:var(--vac);margin-left:14mm}
-.p-k{font-size:8.2pt;font-weight:700;min-width:22mm;letter-spacing:.02em}
-.p-d{font-size:9.2pt;font-weight:700;color:var(--ink)}
-.p-vac .p-d{font-weight:400;color:var(--ink-2)}
-.p-n{margin-left:auto;font-size:7.6pt;font-weight:700}
-.sems{list-style:none;columns:3;column-gap:6mm}
-.s{display:flex;align-items:baseline;gap:2mm;font-size:8.2pt;padding:1.75mm 1.6mm;
-  border-bottom:.5pt solid var(--rule);break-inside:avoid}
-.s-n{font-weight:700;color:var(--acc);min-width:6.5mm;font-size:7.4pt}
-.s-d{color:var(--ink)}
-.s-j{margin-left:auto;color:var(--ink-3);font-size:7pt}
-.s-part .s-j{color:var(--vac);font-weight:700}
-.note{font-size:7.8pt;color:var(--ink-2);background:#f7f8fa;border-left:1.6pt solid var(--acc-line);
-  padding:2.4mm 3mm;border-radius:0 1.2mm 1.2mm 0;line-height:1.5}
-.note b{color:var(--ink)}
-.ft{margin-top:auto;padding-top:3mm;border-top:.6pt solid var(--rule);
-  display:flex;justify-content:space-between;font-size:6.4pt;color:var(--ink-3)}
 @page{size:A4;margin:0}
 """
 
@@ -252,39 +204,6 @@ HTML = f"""<meta charset="utf-8">
   </div>
 
   <div class="mois">{vignettes}{carte_vac}</div>
-</div>
-
-<div class="page">
-  <div class="hd">
-    <div>
-      <div class="hd-eyebrow">Repères</div>
-      <h1>Le rythme de l’année</h1>
-      <div class="hd-sub">Six périodes de cours séparées par cinq interruptions</div>
-    </div>
-    <div class="hd-r"><div class="hd-big">6</div><div class="hd-lab">périodes</div></div>
-  </div>
-
-  <div class="sec">
-    <div class="rythme">{alt}</div>
-  </div>
-
-  <div class="sec">
-    <div class="h2">Semaine par semaine</div>
-    <div class="h2-s">Chaque semaine compte six jours de cours, du lundi au samedi.</div>
-    <ul class="sems">{lignes_sem}</ul>
-  </div>
-
-  <div class="note">
-    <b>Deux semaines particulières.</b> La semaine 03 s’arrête le vendredi 16 octobre
-    (l’interruption de la Toussaint commence le samedi), et la semaine 04 ne compte que le
-    samedi 31 octobre, jour de reprise. Ensemble, elles forment bien six jours de cours&nbsp;:
-    l’année totalise ainsi 28 séances pour chaque jour de la semaine.
-  </div>
-
-  <div class="ft">
-    <span>Calendrier des cours · année scolaire 2026 — 2027</span>
-    <span>{fr(start)} &rarr; {fr(end)} · 168 jours</span>
-  </div>
 </div>
 """
 
