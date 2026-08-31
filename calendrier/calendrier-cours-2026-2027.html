@@ -1,0 +1,176 @@
+<meta charset="utf-8">
+<title>Calendrier des cours 2026-2027</title>
+<style>
+:root{
+  --ink:#161a20; --ink-2:#4a525e; --ink-3:#8b93a1;
+  --acc:#2b4a7d; --acc-soft:#dce5f4; --acc-line:#b9c9e4;
+  --vac:#b8763a; --vac-soft:#f7ece1;
+  --rule:#e3e6ec; --paper:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Liberation Sans","Helvetica Neue",Arial,"DejaVu Sans",sans-serif;
+  color:var(--ink);background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:13mm 14mm 10mm;display:flex;flex-direction:column;
+  page-break-after:always;overflow:hidden}
+.page:last-child{page-break-after:auto}
+
+/* ---- en-tête ---- */
+.hd{border-bottom:1.6pt solid var(--ink);padding-bottom:3.2mm;margin-bottom:4mm;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:6mm}
+.hd-eyebrow{font-size:7pt;letter-spacing:.20em;text-transform:uppercase;color:var(--acc);
+  font-weight:700;margin-bottom:1.4mm}
+.hd h1{font-family:"Bitstream Charter","Liberation Serif",Georgia,serif;
+  font-size:24pt;line-height:1;font-weight:700;letter-spacing:-.01em}
+.hd-sub{font-size:8.6pt;color:var(--ink-2);margin-top:1.8mm}
+.hd-sub b{color:var(--ink);font-weight:700}
+.hd-r{text-align:right;flex-shrink:0}
+.hd-big{font-family:"Bitstream Charter","Liberation Serif",Georgia,serif;
+  font-size:30pt;line-height:.9;font-weight:700;color:var(--acc)}
+.hd-lab{font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:700;margin-top:1.2mm}
+
+/* ---- bandeau chiffres ---- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:.6pt solid var(--rule);
+  border-radius:1.6mm;overflow:hidden;margin-bottom:3.6mm}
+.st{padding:2.6mm 3mm;border-right:.6pt solid var(--rule)}
+.st:last-child{border-right:0}
+.st-v{font-size:12pt;font-weight:700;line-height:1;letter-spacing:-.01em}
+.st-l{font-size:6.6pt;color:var(--ink-2);margin-top:1.1mm;line-height:1.3}
+
+/* ---- légende ---- */
+.lg{display:flex;gap:5mm;align-items:center;font-size:7pt;color:var(--ink-2);margin-bottom:3.4mm}
+.lg i{display:inline-block;width:3.1mm;height:3.1mm;border-radius:.7mm;margin-right:1.3mm;
+  vertical-align:-.5mm;border:.5pt solid var(--rule)}
+.lg .k-c{background:var(--acc-soft);border-color:var(--acc-line)}
+.lg .k-v{background:#fff;border-color:#c8cdd6}
+.lg .k-d{background:#f4f5f7;border-color:#eceef1}
+.lg .k-j{background:var(--acc);border-color:var(--acc)}
+
+/* ---- grille des mois ---- */
+.mois{display:grid;grid-template-columns:repeat(3,1fr);gap:4.5mm;flex:1;
+  grid-auto-rows:1fr;align-content:stretch}
+.m{display:flex;flex-direction:column}
+.m-h{display:flex;align-items:baseline;gap:1.4mm;border-bottom:.8pt solid var(--ink);
+  padding-bottom:1.1mm;margin-bottom:1.4mm}
+.m-n{font-size:10.2pt;font-weight:700;text-transform:capitalize;letter-spacing:-.01em}
+.m-y{font-size:7pt;color:var(--ink-3);font-weight:700}
+.m-c{margin-left:auto;font-size:7.2pt;font-weight:700;color:var(--acc);
+  background:var(--acc-soft);border-radius:4mm;padding:.3mm 1.6mm}
+.g{display:grid;grid-template-columns:repeat(7,1fr);gap:.6mm}
+.wd{font-size:6.4pt;font-weight:700;color:var(--ink-3);text-align:center;padding-bottom:.6mm}
+.wd-d{color:#c2c8d2}
+.d{font-size:7.8pt;text-align:center;padding:1.35mm 0;border-radius:.8mm;color:var(--ink-2)}
+.d-cours{background:var(--acc-soft);color:var(--acc);font-weight:700}
+.d-vac{background:#fff;color:var(--ink-3)}
+.d-dim{background:#f4f5f7;color:#c2c8d2}
+.d-hors{color:#dfe2e7}
+.d-off{}
+.d-jalon{background:var(--acc);color:#fff;font-weight:700}
+
+/* ---- carte interruptions ---- */
+.m-info{grid-column:span 2;background:var(--vac-soft);border-radius:1.8mm;padding:2.6mm 3.2mm;
+  display:flex;flex-direction:column}
+.i-h{font-size:7pt;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--vac);
+  border-bottom:.8pt solid #e6d3bf;padding-bottom:1.2mm;margin-bottom:1.4mm}
+.i-l{list-style:none;columns:2;column-gap:4mm}
+.i-l li{display:flex;align-items:baseline;gap:1.4mm;font-size:7.6pt;padding:2.5mm 0;
+  break-inside:avoid}
+.i-t{font-weight:700;min-width:16mm}
+.i-d{color:var(--ink-2)}
+.i-n{margin-left:auto;color:var(--vac);font-weight:700;font-size:7pt}
+.i-f{margin-top:auto;padding-top:2.2mm;border-top:.8pt solid #e6d3bf;font-size:7pt;
+  color:#9c7247;line-height:1.55;display:flex;flex-direction:column;gap:.6mm}
+.i-f b{color:var(--vac);font-weight:700}
+
+/* ---- page 2 ---- */
+.h2{font-family:"Bitstream Charter","Liberation Serif",Georgia,serif;font-size:14pt;
+  font-weight:700;letter-spacing:-.01em;margin-bottom:1mm}
+.h2-s{font-size:8pt;color:var(--ink-2);margin-bottom:3.2mm}
+.sec{margin-bottom:7mm}
+.rythme{display:flex;flex-direction:column;gap:1.5mm}
+.p{display:flex;align-items:baseline;gap:3mm;padding:3.1mm 3.4mm;border-radius:1.4mm}
+.p-cours{background:var(--acc-soft);color:var(--acc)}
+.p-vac{background:var(--vac-soft);color:var(--vac);margin-left:14mm}
+.p-k{font-size:8.2pt;font-weight:700;min-width:22mm;letter-spacing:.02em}
+.p-d{font-size:9.2pt;font-weight:700;color:var(--ink)}
+.p-vac .p-d{font-weight:400;color:var(--ink-2)}
+.p-n{margin-left:auto;font-size:7.6pt;font-weight:700}
+.sems{list-style:none;columns:3;column-gap:6mm}
+.s{display:flex;align-items:baseline;gap:2mm;font-size:8.2pt;padding:1.75mm 1.6mm;
+  border-bottom:.5pt solid var(--rule);break-inside:avoid}
+.s-n{font-weight:700;color:var(--acc);min-width:6.5mm;font-size:7.4pt}
+.s-d{color:var(--ink)}
+.s-j{margin-left:auto;color:var(--ink-3);font-size:7pt}
+.s-part .s-j{color:var(--vac);font-weight:700}
+.note{font-size:7.8pt;color:var(--ink-2);background:#f7f8fa;border-left:1.6pt solid var(--acc-line);
+  padding:2.4mm 3mm;border-radius:0 1.2mm 1.2mm 0;line-height:1.5}
+.note b{color:var(--ink)}
+.ft{margin-top:auto;padding-top:3mm;border-top:.6pt solid var(--rule);
+  display:flex;justify-content:space-between;font-size:6.4pt;color:var(--ink-3)}
+@page{size:A4;margin:0}
+</style>
+
+<div class="page">
+  <div class="hd">
+    <div>
+      <div class="hd-eyebrow">Année scolaire 2026 — 2027</div>
+      <h1>Calendrier des cours</h1>
+      <div class="hd-sub">Du <b>lundi 28 septembre 2026</b> au <b>samedi 19 juin 2027</b>
+        &nbsp;·&nbsp; cours du lundi au samedi</div>
+    </div>
+    <div class="hd-r"><div class="hd-big">168</div><div class="hd-lab">jours de cours</div></div>
+  </div>
+
+  <div class="stats">
+    <div class="st"><div class="st-v">28 semaines</div>
+      <div class="st-l">de cours réparties sur 10 mois</div></div>
+    <div class="st"><div class="st-v">6 jours / semaine</div>
+      <div class="st-l">lundi &rarr; samedi, jamais le dimanche</div></div>
+    <div class="st"><div class="st-v">28 × chaque jour</div>
+      <div class="st-l">28 lundis, 28 mardis… 28 samedis</div></div>
+    <div class="st"><div class="st-v">5 interruptions</div>
+      <div class="st-l">de deux semaines chacune</div></div>
+  </div>
+
+  <div class="lg">
+    <span><i class="k-c"></i>Jour de cours</span>
+    <span><i class="k-v"></i>Interruption</span>
+    <span><i class="k-d"></i>Dimanche</span>
+    <span><i class="k-j"></i>Rentrée &amp; dernier jour</span>
+  </div>
+
+  <div class="mois"><div class="m"><div class="m-h"><span class="m-n">septembre</span><span class="m-y">2026</span><span class="m-c">3</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-hors">1</div><div class="d d-hors">2</div><div class="d d-hors">3</div><div class="d d-hors">4</div><div class="d d-hors">5</div><div class="d d-hors">6</div><div class="d d-hors">7</div><div class="d d-hors">8</div><div class="d d-hors">9</div><div class="d d-hors">10</div><div class="d d-hors">11</div><div class="d d-hors">12</div><div class="d d-hors">13</div><div class="d d-hors">14</div><div class="d d-hors">15</div><div class="d d-hors">16</div><div class="d d-hors">17</div><div class="d d-hors">18</div><div class="d d-hors">19</div><div class="d d-hors">20</div><div class="d d-hors">21</div><div class="d d-hors">22</div><div class="d d-hors">23</div><div class="d d-hors">24</div><div class="d d-hors">25</div><div class="d d-hors">26</div><div class="d d-hors">27</div><div class="d d-cours d-jalon">28</div><div class="d d-cours">29</div><div class="d d-cours">30</div></div></div><div class="m"><div class="m-h"><span class="m-n">octobre</span><span class="m-y">2026</span><span class="m-c">15</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-cours">1</div><div class="d d-cours">2</div><div class="d d-cours">3</div><div class="d d-dim">4</div><div class="d d-cours">5</div><div class="d d-cours">6</div><div class="d d-cours">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-dim">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-vac">17</div><div class="d d-dim">18</div><div class="d d-vac">19</div><div class="d d-vac">20</div><div class="d d-vac">21</div><div class="d d-vac">22</div><div class="d d-vac">23</div><div class="d d-vac">24</div><div class="d d-dim">25</div><div class="d d-vac">26</div><div class="d d-vac">27</div><div class="d d-vac">28</div><div class="d d-vac">29</div><div class="d d-vac">30</div><div class="d d-cours">31</div></div></div><div class="m"><div class="m-h"><span class="m-n">novembre</span><span class="m-y">2026</span><span class="m-c">25</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-dim">1</div><div class="d d-cours">2</div><div class="d d-cours">3</div><div class="d d-cours">4</div><div class="d d-cours">5</div><div class="d d-cours">6</div><div class="d d-cours">7</div><div class="d d-dim">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-cours">14</div><div class="d d-dim">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-cours">21</div><div class="d d-dim">22</div><div class="d d-cours">23</div><div class="d d-cours">24</div><div class="d d-cours">25</div><div class="d d-cours">26</div><div class="d d-cours">27</div><div class="d d-cours">28</div><div class="d d-dim">29</div><div class="d d-cours">30</div></div></div><div class="m"><div class="m-h"><span class="m-n">décembre</span><span class="m-y">2026</span><span class="m-c">17</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-cours">1</div><div class="d d-cours">2</div><div class="d d-cours">3</div><div class="d d-cours">4</div><div class="d d-cours">5</div><div class="d d-dim">6</div><div class="d d-cours">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-dim">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-dim">20</div><div class="d d-vac">21</div><div class="d d-vac">22</div><div class="d d-vac">23</div><div class="d d-vac">24</div><div class="d d-vac">25</div><div class="d d-vac">26</div><div class="d d-dim">27</div><div class="d d-vac">28</div><div class="d d-vac">29</div><div class="d d-vac">30</div><div class="d d-vac">31</div></div></div><div class="m"><div class="m-h"><span class="m-n">janvier</span><span class="m-y">2027</span><span class="m-c">24</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-vac">1</div><div class="d d-vac">2</div><div class="d d-dim">3</div><div class="d d-cours">4</div><div class="d d-cours">5</div><div class="d d-cours">6</div><div class="d d-cours">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-dim">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-dim">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-cours">21</div><div class="d d-cours">22</div><div class="d d-cours">23</div><div class="d d-dim">24</div><div class="d d-cours">25</div><div class="d d-cours">26</div><div class="d d-cours">27</div><div class="d d-cours">28</div><div class="d d-cours">29</div><div class="d d-cours">30</div><div class="d d-dim">31</div></div></div><div class="m"><div class="m-h"><span class="m-n">février</span><span class="m-y">2027</span><span class="m-c">18</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-cours">1</div><div class="d d-cours">2</div><div class="d d-cours">3</div><div class="d d-cours">4</div><div class="d d-cours">5</div><div class="d d-cours">6</div><div class="d d-dim">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-dim">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-dim">21</div><div class="d d-vac">22</div><div class="d d-vac">23</div><div class="d d-vac">24</div><div class="d d-vac">25</div><div class="d d-vac">26</div><div class="d d-vac">27</div><div class="d d-dim">28</div></div></div><div class="m"><div class="m-h"><span class="m-n">mars</span><span class="m-y">2027</span><span class="m-c">18</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-vac">1</div><div class="d d-vac">2</div><div class="d d-vac">3</div><div class="d d-vac">4</div><div class="d d-vac">5</div><div class="d d-vac">6</div><div class="d d-dim">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-dim">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-dim">21</div><div class="d d-cours">22</div><div class="d d-cours">23</div><div class="d d-cours">24</div><div class="d d-cours">25</div><div class="d d-cours">26</div><div class="d d-cours">27</div><div class="d d-dim">28</div><div class="d d-vac">29</div><div class="d d-vac">30</div><div class="d d-vac">31</div></div></div><div class="m"><div class="m-h"><span class="m-n">avril</span><span class="m-y">2027</span><span class="m-c">12</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-vac">1</div><div class="d d-vac">2</div><div class="d d-vac">3</div><div class="d d-dim">4</div><div class="d d-vac">5</div><div class="d d-vac">6</div><div class="d d-vac">7</div><div class="d d-vac">8</div><div class="d d-vac">9</div><div class="d d-vac">10</div><div class="d d-dim">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-dim">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-cours">21</div><div class="d d-cours">22</div><div class="d d-cours">23</div><div class="d d-cours">24</div><div class="d d-dim">25</div><div class="d d-vac">26</div><div class="d d-vac">27</div><div class="d d-vac">28</div><div class="d d-vac">29</div><div class="d d-vac">30</div></div></div><div class="m"><div class="m-h"><span class="m-n">mai</span><span class="m-y">2027</span><span class="m-c">19</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-off"></div><div class="d d-vac">1</div><div class="d d-dim">2</div><div class="d d-vac">3</div><div class="d d-vac">4</div><div class="d d-vac">5</div><div class="d d-vac">6</div><div class="d d-vac">7</div><div class="d d-vac">8</div><div class="d d-dim">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-cours">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-dim">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours">19</div><div class="d d-cours">20</div><div class="d d-cours">21</div><div class="d d-cours">22</div><div class="d d-dim">23</div><div class="d d-cours">24</div><div class="d d-cours">25</div><div class="d d-cours">26</div><div class="d d-cours">27</div><div class="d d-cours">28</div><div class="d d-cours">29</div><div class="d d-dim">30</div><div class="d d-cours">31</div></div></div><div class="m"><div class="m-h"><span class="m-n">juin</span><span class="m-y">2027</span><span class="m-c">17</span></div><div class="g"><div class="wd">L</div><div class="wd">M</div><div class="wd">M</div><div class="wd">J</div><div class="wd">V</div><div class="wd">S</div><div class="wd wd-d">D</div><div class="d d-off"></div><div class="d d-cours">1</div><div class="d d-cours">2</div><div class="d d-cours">3</div><div class="d d-cours">4</div><div class="d d-cours">5</div><div class="d d-dim">6</div><div class="d d-cours">7</div><div class="d d-cours">8</div><div class="d d-cours">9</div><div class="d d-cours">10</div><div class="d d-cours">11</div><div class="d d-cours">12</div><div class="d d-dim">13</div><div class="d d-cours">14</div><div class="d d-cours">15</div><div class="d d-cours">16</div><div class="d d-cours">17</div><div class="d d-cours">18</div><div class="d d-cours d-jalon">19</div><div class="d d-hors">20</div><div class="d d-hors">21</div><div class="d d-hors">22</div><div class="d d-hors">23</div><div class="d d-hors">24</div><div class="d d-hors">25</div><div class="d d-hors">26</div><div class="d d-hors">27</div><div class="d d-hors">28</div><div class="d d-hors">29</div><div class="d d-hors">30</div></div></div><div class="m m-info"><div class="i-h">Interruptions</div><ul class="i-l"><li><span class="i-t">Toussaint</span><span class="i-d">17 oct. &rarr; 30 oct.</span><span class="i-n">14 j</span></li><li><span class="i-t">Noël</span><span class="i-d">20 déc. &rarr; 3 janv.</span><span class="i-n">15 j</span></li><li><span class="i-t">Hiver</span><span class="i-d">21 févr. &rarr; 7 mars</span><span class="i-n">15 j</span></li><li><span class="i-t">Printemps</span><span class="i-d">28 mars &rarr; 11 avr.</span><span class="i-n">15 j</span></li><li><span class="i-t">Mai</span><span class="i-d">25 avr. &rarr; 9 mai</span><span class="i-n">15 j</span></li></ul><div class="i-f"><div><b>Reprise</b> le lendemain de chaque fin de période.</div><div>Seule exception&nbsp;: la Toussaint s’achève un vendredi &mdash; les cours reprennent le <b>samedi 31 octobre</b>.</div></div></div></div>
+</div>
+
+<div class="page">
+  <div class="hd">
+    <div>
+      <div class="hd-eyebrow">Repères</div>
+      <h1>Le rythme de l’année</h1>
+      <div class="hd-sub">Six périodes de cours séparées par cinq interruptions</div>
+    </div>
+    <div class="hd-r"><div class="hd-big">6</div><div class="hd-lab">périodes</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="rythme"><div class="p p-cours"><div class="p-k">Période 1</div><div class="p-d">28 sept. 2026 &nbsp;&rarr;&nbsp; 16 oct. 2026</div><div class="p-n">17 jours</div></div><div class="p p-vac"><div class="p-k">Toussaint</div><div class="p-d">17 oct. 2026 &nbsp;&rarr;&nbsp; 30 oct. 2026</div><div class="p-n">14 jours</div></div><div class="p p-cours"><div class="p-k">Période 2</div><div class="p-d">31 oct. 2026 &nbsp;&rarr;&nbsp; 19 déc. 2026</div><div class="p-n">43 jours</div></div><div class="p p-vac"><div class="p-k">Noël</div><div class="p-d">20 déc. 2026 &nbsp;&rarr;&nbsp; 3 janv. 2027</div><div class="p-n">15 jours</div></div><div class="p p-cours"><div class="p-k">Période 3</div><div class="p-d">4 janv. 2027 &nbsp;&rarr;&nbsp; 20 févr. 2027</div><div class="p-n">42 jours</div></div><div class="p p-vac"><div class="p-k">Hiver</div><div class="p-d">21 févr. 2027 &nbsp;&rarr;&nbsp; 7 mars 2027</div><div class="p-n">15 jours</div></div><div class="p p-cours"><div class="p-k">Période 4</div><div class="p-d">8 mars 2027 &nbsp;&rarr;&nbsp; 27 mars 2027</div><div class="p-n">18 jours</div></div><div class="p p-vac"><div class="p-k">Printemps</div><div class="p-d">28 mars 2027 &nbsp;&rarr;&nbsp; 11 avr. 2027</div><div class="p-n">15 jours</div></div><div class="p p-cours"><div class="p-k">Période 5</div><div class="p-d">12 avr. 2027 &nbsp;&rarr;&nbsp; 24 avr. 2027</div><div class="p-n">12 jours</div></div><div class="p p-vac"><div class="p-k">Mai</div><div class="p-d">25 avr. 2027 &nbsp;&rarr;&nbsp; 9 mai 2027</div><div class="p-n">15 jours</div></div><div class="p p-cours"><div class="p-k">Période 6</div><div class="p-d">10 mai 2027 &nbsp;&rarr;&nbsp; 19 juin 2027</div><div class="p-n">36 jours</div></div></div>
+  </div>
+
+  <div class="sec">
+    <div class="h2">Semaine par semaine</div>
+    <div class="h2-s">Chaque semaine compte six jours de cours, du lundi au samedi.</div>
+    <ul class="sems"><li class="s"><span class="s-n">01</span><span class="s-d">28/09 &ndash; 03/10</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">02</span><span class="s-d">05/10 &ndash; 10/10</span><span class="s-j">6 j</span></li><li class="s s-part"><span class="s-n">03</span><span class="s-d">12/10 &ndash; 16/10</span><span class="s-j">5 j</span></li><li class="s s-part"><span class="s-n">04</span><span class="s-d">31/10 &ndash; 31/10</span><span class="s-j">1 j</span></li><li class="s"><span class="s-n">05</span><span class="s-d">02/11 &ndash; 07/11</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">06</span><span class="s-d">09/11 &ndash; 14/11</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">07</span><span class="s-d">16/11 &ndash; 21/11</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">08</span><span class="s-d">23/11 &ndash; 28/11</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">09</span><span class="s-d">30/11 &ndash; 05/12</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">10</span><span class="s-d">07/12 &ndash; 12/12</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">11</span><span class="s-d">14/12 &ndash; 19/12</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">12</span><span class="s-d">04/01 &ndash; 09/01</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">13</span><span class="s-d">11/01 &ndash; 16/01</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">14</span><span class="s-d">18/01 &ndash; 23/01</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">15</span><span class="s-d">25/01 &ndash; 30/01</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">16</span><span class="s-d">01/02 &ndash; 06/02</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">17</span><span class="s-d">08/02 &ndash; 13/02</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">18</span><span class="s-d">15/02 &ndash; 20/02</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">19</span><span class="s-d">08/03 &ndash; 13/03</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">20</span><span class="s-d">15/03 &ndash; 20/03</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">21</span><span class="s-d">22/03 &ndash; 27/03</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">22</span><span class="s-d">12/04 &ndash; 17/04</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">23</span><span class="s-d">19/04 &ndash; 24/04</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">24</span><span class="s-d">10/05 &ndash; 15/05</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">25</span><span class="s-d">17/05 &ndash; 22/05</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">26</span><span class="s-d">24/05 &ndash; 29/05</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">27</span><span class="s-d">31/05 &ndash; 05/06</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">28</span><span class="s-d">07/06 &ndash; 12/06</span><span class="s-j">6 j</span></li><li class="s"><span class="s-n">29</span><span class="s-d">14/06 &ndash; 19/06</span><span class="s-j">6 j</span></li></ul>
+  </div>
+
+  <div class="note">
+    <b>Deux semaines particulières.</b> La semaine 03 s’arrête le vendredi 16 octobre
+    (l’interruption de la Toussaint commence le samedi), et la semaine 04 ne compte que le
+    samedi 31 octobre, jour de reprise. Ensemble, elles forment bien six jours de cours&nbsp;:
+    l’année totalise ainsi 28 séances pour chaque jour de la semaine.
+  </div>
+
+  <div class="ft">
+    <span>Calendrier des cours · année scolaire 2026 — 2027</span>
+    <span>28 septembre 2026 &rarr; 19 juin 2027 · 168 jours</span>
+  </div>
+</div>
