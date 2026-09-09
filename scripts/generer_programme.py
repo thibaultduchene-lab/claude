@@ -57,11 +57,13 @@ PROGRAMMES = {
             "Samedi : Rassemblement 13h30 – 15h",
         ],
         "note": "Le cours privé (lundi) et le semi-privé (mercredi) sont à payer directement à Thibault.",
+        "remarques": [
+            "Le rassemblement du samedi (13h30 – 15h) se déroule dans un autre club : il n'est pas facturé par l'école.",
+        ],
         "tableau": [
             ("1h de terrain (privé)", "525", "Gratuit"),
             ("1h de semi-privé", "………", "………"),
             ("Collectif 1h", "………", "………"),
-            ("Rassemblement 1h30", "………", "………"),
             ("Total", "………", "………"),
         ],
     },
@@ -147,13 +149,17 @@ def generer(cle, data, dossier="/home/user/claude"):
     for ligne in data["planning"]:
         doc.add_paragraph(ligne)
 
+    lignes_note = []
     if data.get("note"):
+        lignes_note.append(data["note"])
+    lignes_note += list(data.get("remarques", []))
+    for i, texte in enumerate(lignes_note):
         note = doc.add_paragraph()
-        nr = note.add_run(data["note"])
+        nr = note.add_run(texte)
         nr.italic = True
-        note.paragraph_format.space_before = Pt(6)
-        note.paragraph_format.space_after = Pt(14)
-    else:
+        note.paragraph_format.space_before = Pt(6) if i == 0 else Pt(0)
+        note.paragraph_format.space_after = Pt(14) if i == len(lignes_note) - 1 else Pt(4)
+    if not lignes_note:
         doc.paragraphs[-1].paragraph_format.space_after = Pt(20)
 
     # Tableau
