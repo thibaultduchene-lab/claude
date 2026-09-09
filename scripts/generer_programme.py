@@ -48,6 +48,42 @@ PROGRAMMES = {
             ("Total", "………", "………"),
         ],
     },
+    "Noah_Vicente": {
+        "titre": "Programme Noah Vicente",
+        "planning": [
+            "Lundi : Privé 16h – 17h (Thibault)",
+            "Mercredi : Semi-privé 13h30 – 14h30 avec Samuel (Thibault)",
+            "Jeudi : Collectif 16h30 – 17h30 (avec Taha)",
+            "Samedi : Rassemblement 13h30 – 15h",
+        ],
+        "note": None,
+        "tableau": [
+            ("1h de terrain (privé)", "525", "Gratuit"),
+            ("1h de semi-privé", "………", "………"),
+            ("Collectif 1h", "………", "………"),
+            ("Rassemblement 1h30", "………", "………"),
+            ("Total", "………", "………"),
+        ],
+    },
+    "Aleksander_LUKACHI": {
+        "titre": "Programme Aleksander LUKACHI",
+        "planning": [
+            "Lundi : Physique 16h45 – 18h15 (avec Loïc)",
+            "Mardi : Privé 16h30 – 17h30 (Yassine)",
+            "Mercredi : Collectif 16h – 17h30 (avec Julien)",
+            "Jeudi : Collectif 17h – 18h30 (avec Yassine)",
+            "Samedi : Physique sur terrain 10h – 11h et League Cup 15h – 16h30",
+        ],
+        "note": "Le cours privé (mardi) est à payer directement à Yassine.",
+        "tableau": [
+            ("1h de terrain (privé)", "525", "Gratuit"),
+            ("1h30 de physique", "………", "………"),
+            ("1h de physique sur terrain", "………", "Gratuit"),
+            ("Collectif 3h", "………", "………"),
+            ("League Cup", "250", "………"),
+            ("Total", "………", "………"),
+        ],
+    },
 }
 
 
@@ -111,11 +147,14 @@ def generer(cle, data, dossier="/home/user/claude"):
     for ligne in data["planning"]:
         doc.add_paragraph(ligne)
 
-    note = doc.add_paragraph()
-    nr = note.add_run(data["note"])
-    nr.italic = True
-    note.paragraph_format.space_before = Pt(6)
-    note.paragraph_format.space_after = Pt(14)
+    if data.get("note"):
+        note = doc.add_paragraph()
+        nr = note.add_run(data["note"])
+        nr.italic = True
+        note.paragraph_format.space_before = Pt(6)
+        note.paragraph_format.space_after = Pt(14)
+    else:
+        doc.paragraphs[-1].paragraph_format.space_after = Pt(20)
 
     # Tableau
     lignes = [("Cours", "Prix normal (€)", "Prix adapté (€)")] + list(data["tableau"])
