@@ -21,7 +21,7 @@ PROGRAMMES = {
             "Lundi : Privé 16h – 17h (Yassine)",
             "Mercredi : Collectif 14h – 15h (Yassine)",
             "Vendredi : Privé 16h – 17h (Yassine)",
-            "Samedi : Physique sur terrain 10h – 11h et Collectif 11h – 12h (avec Adel)",
+            "Samedi : Physique sur terrain 10h – 11h (avec Guillaume) et Collectif 11h – 12h (avec Adel)",
         ],
         "note": "Les cours privés (lundi et vendredi) sont à payer directement à Yassine.",
         "tableau": [
@@ -36,7 +36,7 @@ PROGRAMMES = {
         "planning": [
             "Mercredi : Physique 14h – 15h30 (avec Loïc) et Privé 17h30 – 18h30 (Yassine)",
             "Jeudi : Collectif 17h30 – 19h (avec Taha)",
-            "Samedi : Physique sur terrain 11h – 12h et League Cup 15h – 16h30",
+            "Samedi : Physique sur terrain 11h – 12h (avec Guillaume) et League Cup 15h – 16h30",
         ],
         "note": "Le cours privé (mercredi) est à payer directement à Yassine.",
         "tableau": [
@@ -72,7 +72,7 @@ PROGRAMMES = {
             "Mardi : Privé 16h30 – 17h30 (Yassine)",
             "Mercredi : Collectif 16h – 17h30 (avec Julien)",
             "Jeudi : Collectif 17h – 18h30 (avec Yassine)",
-            "Samedi : Physique sur terrain 10h – 11h et League Cup 15h – 16h30",
+            "Samedi : Physique sur terrain 10h – 11h (avec Guillaume) et League Cup 15h – 16h30",
         ],
         "note": "Le cours privé (mardi) est à payer directement à Yassine.",
         "tableau": [
