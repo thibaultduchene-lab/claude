@@ -56,7 +56,7 @@ PROGRAMMES = {
             "Jeudi : Collectif 16h30 – 17h30 (avec Taha)",
             "Samedi : Rassemblement 13h30 – 15h",
         ],
-        "note": None,
+        "note": "Le cours privé (lundi) est à payer directement à Thibault.",
         "tableau": [
             ("1h de terrain (privé)", "525", "Gratuit"),
             ("1h de semi-privé", "………", "………"),
