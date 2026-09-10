@@ -6,6 +6,12 @@
 # se rapportant à décembre 2024 (et déjà encodées dans le bilan 2024) sont
 # EXCLUES de 2025. Le total du mois ne correspond donc volontairement pas à la
 # variation de solde de l'extrait bancaire.
+#
+# Symétriquement, les charges de décembre 2025 débitées début janvier 2026
+# (précompte salarial et SD Worx) sont INCLUSES dans décembre 2025 : l'extrait
+# 2025-012 ne se rapproche donc pas non plus.
+
+DEC25 = "Payé le 04/05-01-2026 mais rattaché à décembre 2025 (même règle qu'en 2024)"
 
 MOIS = []
 
@@ -404,6 +410,7 @@ MOIS.append(("Novembre", {
 
 MOIS.append(("Décembre", {
  "solde_debut": 3971.83, "solde_fin": 8522.89, "extrait": "2025 - 012",
+ # + 2.581,85 de charges de décembre débitées début janvier 2026 (extrait 2026-001)
  "entrees": [
     ("LAM2514", 4162.50, "Pas de LAM2513 encaissé — correspond peut-être au virement du 29-10 sans numéro"),
     ("LAM2515", 5382.45, ""),
@@ -431,5 +438,7 @@ MOIS.append(("Décembre", {
     ("Parking",                                           3.40, "Indigo Park Docks, Bruxelles"),
     ("Semelles orthopédiques de travail - Podomed",       210.00, "Solde après la consultation du 27-11"),
     ("Frais comptable BDH",                               304.92, "Facture 20250644"),
+    ("Précompte salarial décembre 2025 Thibault Duchène", 2250.00, DEC25),
+    ("SD Worx",                                           331.85, DEC25),
  ],
 }))
