@@ -18,6 +18,7 @@ import openpyxl
 from openpyxl.styles import Alignment, PatternFill
 from data_2025 import MOIS
 from cartes import DECOMPTES, DECOMPTES_MC
+from justificatifs import JUSTIFICATIFS
 
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
@@ -133,6 +134,24 @@ for row in range(first_data_row, r):
             n_jaune += 1
 ws['D5'] = 'Surligné en jaune = à trancher avec le comptable'
 
+# 7. colonne Facture : V sur les lignes dont le justificatif est en main
+attendus = {(mois, lib, round(mnt, 2)): pdf for mois, lib, mnt, pdf in JUSTIFICATIFS}
+trouves = set()
+mois_courant = ''
+for row in range(first_data_row, r):
+    if ws[f'E{row}'].value:
+        mois_courant = ws[f'E{row}'].value
+    cle = (mois_courant, ws[f'I{row}'].value, round(ws[f'J{row}'].value or 0, 2))
+    if cle not in attendus:
+        continue
+    ws[f'K{row}'] = 'V'
+    note = f"Justificatif : {attendus[cle]}"
+    ws[f'L{row}'] = f"{ws[f'L{row}'].value} — {note}" if ws[f'L{row}'].value else note
+    trouves.add(cle)
+manquants = set(attendus) - trouves
+if manquants:
+    raise SystemExit(f'justificatif sans ligne correspondante : {manquants}')
+
 wb.save(OUT)
 print(f'{OUT} écrit — lignes {first_data_row} à {last}, totaux ligne {r}, '
-      f'{n_jaune} cellules surlignées')
+      f'{n_jaune} cellules surlignées, {len(trouves)} justificatif(s) rattaché(s)')
