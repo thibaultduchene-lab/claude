@@ -159,6 +159,37 @@ MOIS.append(("Avril", {
     ("Carburant",                                         60.37, "Lukoil Wezembeek"),
     ("Repas Topogigio",                                   26.00, ""),
     ("Achat matériel sportif - DECATHLON",                84.20, "Decathlon Evere"),
-    ("Achat Delhaize",                                    43.43, "Delhaize Sterrebeek - payé avec la carte 5255 (autre carte)"),
+    ("Achat Delhaize",                                    43.43, "Delhaize Sterrebeek - 1er paiement avec la nouvelle carte 5255"),
+ ],
+}))
+
+MOIS.append(("Mai", {
+ "solde_debut": 2248.45, "solde_fin": 5358.10, "extrait": "2025 - 005",
+ # Extrait du 26-04 au 29-05 : le précompte et SD Worx de mai basculent sur juin.
+ "entrees": [
+    ("LAM2506", 4554.60, ""),
+    ("LAM2507", 5077.11, ""),
+ ],
+ "depenses": [
+    ("Crédit voiture",                                    724.12, ""),
+    ("Précompte salarial avril 2025 Thibault Duchène",    2250.00, ""),
+    ("SD Worx",                                           331.99, ""),
+    ("Farys (eau)",                                       290.00, ""),
+    ("Proximus",                                          71.54, ""),
+    ("Carburant",                                         59.49, "Cora Woluwe — à confirmer (carburant ou achats ?)"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Paiement carte VISA",                               2116.19, "Décompte n° 121"),
+    ("Achat matériel sportif - DECATHLON",                50.00, "Decathlon Evere"),
+    ("Telenet",                                           149.10, ""),
+    ("Carburant",                                         66.09, "Lukoil Tervuren"),
+    ("Divers - sanitaires autoroute",                     1.00, "Tank und Rastanlage, Frechen (Allemagne)"),
+    ("Divers - sanitaires autoroute",                     1.00, "Tank und Rastanlage, Frechen (Allemagne)"),
+    ("Parking",                                           16.50, "Bonner City Parkraum, Bonn (Allemagne)"),
+    ("Carburant",                                         58.83, "Shell Kraainem"),
+    ("Parking",                                           1.85, "Q-Park Woluwe Esplanade"),
+    ("Parking",                                           1.85, "Q-Park Woluwe Esplanade"),
+    ("Electrabel",                                        256.99, "Facture 493/0415/84633"),
+    ("Carburant",                                         72.42, "Q8 Tervuren"),
+    ("Parking",                                           1.50, "Ville de Dinant"),
  ],
 }))
