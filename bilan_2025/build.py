@@ -28,6 +28,9 @@ LARGEURS = {'E': 10.29, 'F': 32.29, 'G': 9.0, 'I': 47.29, 'J': 8.43, 'K': 7.71}
 JAUNE = PatternFill('solid', fgColor='FFFF00')
 
 # une remarque contenant un de ces marqueurs = point à trancher avec le comptable
+# lignes que Thibault veut garder en jaune même si la remarque ne le dit pas
+FORCER_JAUNE = {"Billets d'avion Pérou - Translatina Travel"}
+
 A_TRANCHER = re.compile(
     r"à (confirmer|identifier|préciser|vérifier|valider|joindre|traiter)"
     r"|sans numéro|privée|compte courant|\?", re.I)
@@ -100,8 +103,8 @@ for i, (nom, m) in enumerate(MOIS):
 last = r - BLANK_AFTER_MONTH - 1
 for c in COLS:
     ws[f'{c}{r}']._style = copy.copy(sty_total[c])
-ws[f'G{r}'] = f'=SUM(G{first_data_row}:G{last})'
-ws[f'J{r}'] = f'=SUM(J{first_data_row}:J{last})'
+ws[f'G{r}'] = f'=SUM(G{first_data_row}:G{r-1})'   # jusqu'aux lignes vides,
+ws[f'J{r}'] = f'=SUM(J{first_data_row}:J{r-1})'   # pour englober un ajout en bas
 
 for c in 'GJ':
     for row in range(first_data_row, r + 1):
@@ -122,9 +125,9 @@ for idx in [i for i in ws.row_dimensions if i > r]:   # hauteurs résiduelles du
 # 6. surligner en jaune les lignes qui demandent un arbitrage
 n_jaune = 0
 for row in range(first_data_row, r):
-    for rem_col, cols in (('H', 'FGH'), ('L', 'IJL')):
+    for rem_col, cols, src_col in (('H', 'FGH', 'F'), ('L', 'IJL', 'I')):
         rem = ws[f'{rem_col}{row}'].value
-        if rem and A_TRANCHER.search(str(rem)):
+        if (rem and A_TRANCHER.search(str(rem))) or ws[f'{src_col}{row}'].value in FORCER_JAUNE:
             for c in cols:
                 ws[f'{c}{row}'].fill = JAUNE
             n_jaune += 1
