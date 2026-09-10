@@ -122,3 +122,43 @@ MOIS.append(("Mars", {
     ("Carburant",                                         70.49, "Q8 Easy Zaventem"),
  ],
 }))
+
+MOIS.append(("Avril", {
+ "solde_debut": 3606.60, "solde_fin": 2248.45, "extrait": "2025 - 004",
+ # Extrait arrêté au 26-04 : les opérations de fin de mois (précompte, SD Worx,
+ # facture LAM) figureront sur l'extrait de mai.
+ "entrees": [
+    ("Remboursement billet d'avion Lima-Bruxelles", 1683.78, "Versement de Thibault Duchène - C. Garces Trujillo"),
+ ],
+ "depenses": [
+    ("Repas Exki",                                        30.30, "Exki Woluwe"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Parking",                                           18.40, "Delft (Pays-Bas)"),
+    ("Parking",                                           10.40, "Markthof La Haye (Pays-Bas) — à confirmer"),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Parking",                                           23.00, "Stadparkeerplan Leyde (Pays-Bas)"),
+    ("Frais bancaires trimestriels",                      11.25, ""),
+    ("Carburant",                                         87.00, "Total Leyde (Pays-Bas)"),
+    ("Parking",                                           10.46, "Commune d'Utrecht (Pays-Bas)"),
+    ("Parking",                                           9.00, "Parking De Vooruitgang, Volendam (Pays-Bas)"),
+    ("Achat - NZA Utrecht BV",                            289.97, "Amsterdam (Pays-Bas) — commerçant à identifier"),
+    ("Proximus",                                          141.50, ""),
+    ("Parking",                                           32.76, "Commune d'Utrecht (Pays-Bas)"),
+    ("Telenet",                                           149.10, ""),
+    ("Parking",                                           8.00, "Q-Park Sint Jorisplein, Amersfoort (Pays-Bas)"),
+    ("Paiement carte VISA",                               433.78, "Décompte n° 091"),
+    ("Assurance voiture",                                 431.25, "Paiement par domiciliation (AG Insurance)"),
+    ("Carburant",                                         72.18, "Q8 Easy Zaventem"),
+    ("Parking",                                           6.00, "T and T Parking Bruxelles"),
+    ("Parking",                                           14.00, "Parking Casino Middelkerke"),
+    ("Divers - sanitaires autoroute",                     1.00, "2theloo, aire E40 Jabbeke"),
+    ("Divers - sanitaires autoroute",                     1.00, "2theloo, aire E40 Jabbeke"),
+    ("Carburant",                                         64.07, "Q8 Easy Zaventem"),
+    ("Collation",                                         0.80, "AC Restaurants Wanlin"),
+    ("Electrabel",                                        256.99, "Facture 439/4769/34444"),
+    ("Carburant",                                         60.37, "Lukoil Wezembeek"),
+    ("Repas Topogigio",                                   26.00, ""),
+    ("Achat matériel sportif - DECATHLON",                84.20, "Decathlon Evere"),
+    ("Achat Delhaize",                                    43.43, "Delhaize Sterrebeek - payé avec la carte 5255 (autre carte)"),
+ ],
+}))
