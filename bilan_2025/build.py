@@ -6,12 +6,14 @@ supprimée et la colonne « Facture » est laissée vide (à cocher à la main).
 """
 import sys, copy
 import openpyxl
+from openpyxl.styles import Alignment
 from data_2025 import MOIS
 
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
 COLS = 'EFGHIJK'               # K = Remarque, une fois « Preuve de paiement » retirée
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
+LARGEUR_MAX = 60               # largeur max de la colonne Remarque
 
 wb = openpyxl.load_workbook(TPL)
 ws = wb['Feuil1']
@@ -63,10 +65,16 @@ for c in 'GI':
     for row in range(first_data_row, r + 1):
         ws[f'{c}{row}'].number_format = '#,##0.00'
 
-# 6. élargir la colonne Remarque pour que le texte le plus long tienne dedans
+for idx in [i for i in ws.row_dimensions if i > r]:   # hauteurs résiduelles du modèle
+    del ws.row_dimensions[idx]
+
+# 6. colonne Remarque : assez large pour le texte, avec retour à la ligne
+#    au-delà de LARGEUR_MAX pour ne pas déformer la feuille
 longueur = max([len(str(ws[f'K{row}'].value)) for row in range(5, r + 1)
                 if ws[f'K{row}'].value] or [0])
-ws.column_dimensions['K'].width = longueur + 3
+ws.column_dimensions['K'].width = min(longueur + 3, LARGEUR_MAX)
+for row in range(first_data_row, r + 1):
+    ws[f'K{row}'].alignment = Alignment(wrap_text=True, vertical='top')
 
 wb.save(OUT)
 print(f'{OUT} écrit — données lignes {first_data_row} à {last}, totaux ligne {r}')

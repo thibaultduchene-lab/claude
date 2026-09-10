@@ -7,7 +7,9 @@
 # EXCLUES de 2025. Le total du mois ne correspond donc volontairement pas à la
 # variation de solde de l'extrait bancaire.
 
-MOIS = [("Janvier", {
+MOIS = []
+
+MOIS.append(("Janvier", {
  "solde_debut": 1378.02, "solde_fin": 3407.94, "extrait": "2025 - 001",
  # Exclus car déjà dans le bilan 2024 (décembre) :
  #   entrée  LAM2415 4.743,17
@@ -48,4 +50,40 @@ MOIS = [("Janvier", {
     ("Frais comptable BDH",                               242.00, "Facture 20240705"),
     ("Proximus",                                          70.18, ""),
  ],
-})]
+}))
+
+MOIS.append(("Février", {
+ "solde_debut": 3407.94, "solde_fin": 2468.17, "extrait": "2025 - 002",
+ "entrees": [
+    ("LAM2503", 5145.00, ""),
+    ("Remboursement Electrabel", 256.99, "Remboursement du double paiement de la facture 468/9192/57548"),
+ ],
+ "depenses": [
+    ("Achat vêtements sport - PVH Maasmechelen",          210.49, ""),
+    ("Achat vêtements sport - NIKE Maasmechelen",         141.47, ""),
+    ("Parking",                                           2.10, "Indigo Park Docks"),
+    ("Electrabel",                                        256.99, "Facture 468/9192/57548 payée 2× (16-01 et 04-02) — remboursée le 10-02"),
+    ("Telenet",                                           149.10, ""),
+    ("Carburant",                                         65.00, "Dats 24 Nossegem"),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Parking",                                           1.80, "Schaerbeek"),
+    ("Parking",                                           6.20, "Administration communale Bruxelles"),
+    ("Parking",                                           2.50, "Parking Ixelles - Gand"),
+    ("Parking",                                           17.10, "Q-Park Heilig Hart Louvain"),
+    ("Carburant",                                         69.47, "Q8 Easy Zaventem"),
+    ("Transport - STIB",                                  4.60, ""),
+    ("Transport - De Lijn",                               2.50, ""),
+    ("Parking",                                           2.50, "Parkeren Louvain"),
+    ("Parking",                                           1.80, "Commune Saint-Josse"),
+    ("Partena",                                           1441.87, ""),
+    ("Farys (eau)",                                       290.00, ""),
+    ("Parking",                                           6.50, "Parking Ixelles - Gand"),
+    ("Carburant",                                         68.61, "Q8 Easy Zaventem"),
+    ("Repas Lunch Garden",                                39.47, "LG Auderghem"),
+    ("Achat matériel sportif - DECATHLON",                140.00, "Decathlon Evere"),
+    ("Précompte salarial février 2025 Thibault Duchène",  2250.00, ""),
+    ("SD Worx",                                           331.52, ""),
+    ("Carburant",                                         66.07, "Q8 Easy Zaventem"),
+    ("Proximus",                                          49.98, ""),
+ ],
+}))
