@@ -292,3 +292,38 @@ MOIS.append(("Août", {
     ("Parking",                                           3.00, "Parking Grand-Place, Bruxelles"),
  ],
 }))
+
+MOIS.append(("Septembre", {
+ "solde_debut": 2560.31, "solde_fin": 1031.10, "extrait": "2025 - 009",
+ "entrees": [
+    ("LAM2510", 5501.95, "Pas de LAM2509 encaissé — correspond peut-être au virement de juillet sans numéro"),
+ ],
+ "depenses": [
+    ("Partena",                                           1441.87, ""),
+    ("Electrabel",                                        263.44, "Facture 412/3802/96359"),
+    ("Telenet",                                           153.42, ""),
+    ("Carburant",                                         65.14, "Q8 Tervuren"),
+    ("Précompte salarial août 2025 Thibault Duchène",     2250.00, ""),
+    ("SD Worx",                                           331.79, ""),
+    ("Farys (eau)",                                       300.00, ""),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Proximus",                                          70.62, ""),
+    ("Vlaamse Belastingsdienst - taxe de circulation",    161.02, "Comm. 255/2756/05470"),
+    ("Paiement carte VISA",                               3.00, "Décompte n° 244"),
+    ("Parking",                                           3.20, "Woluwe-Saint-Lambert"),
+    ("Carburant",                                         66.74, "Shell Kraainem"),
+    ("Repas Lunch Garden",                                45.77, "Lunch Garden Kraainem"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Proximus",                                          161.83, "2e facture du mois"),
+    ("Parking",                                           0.90, "Schaerbeek"),
+    ("Péage autoroute France",                            101.20, "Domiciliation Autoroutes du Sud de la France"),
+    ("Repas Exki",                                        35.40, "Exki Woluwe"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Formation Indigo Nails Lab Belgium",                630.00, "Facture FA002548 avancée par T. Duchène et remboursée par la société"),
+    ("Carburant",                                         59.40, "Shell Kraainem"),
+    ("Repas - Chez Ji SPRL",                              47.00, "Péruwelz"),
+    ("Carburant",                                         58.45, "Esso Péruwelz"),
+    ("Carburant",                                         13.65, "Total Nivelles"),
+    ("Achat - NEW BS SPRL",                               40.00, "Bruxelles — même commerçant qu'en mars (290,50) à identifier"),
+ ],
+}))
