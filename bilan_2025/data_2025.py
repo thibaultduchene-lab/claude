@@ -262,3 +262,33 @@ MOIS.append(("Juillet", {
     ("Parking",                                           2.80, "Commune de Soulac-sur-Mer (France)"),
  ],
 }))
+
+MOIS.append(("Août", {
+ "solde_debut": 8568.89, "solde_fin": 2560.31, "extrait": "2025 - 008",
+ "entrees": [
+    ("Remboursement achat Decathlon - RTC Lambermont", 123.00, "Contrepartie de l'achat Decathlon du 14-08"),
+ ],
+ "depenses": [
+    ("Précompte salarial juillet 2025 Thibault Duchène", 2250.00, ""),
+    ("SD Worx",                                           331.79, ""),
+    ("Entretien voiture - Garage Gobinau",                87.43, "Soulac-sur-Mer (France)"),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Carburant",                                         72.01, "BP Esso Saint-Léger (France)"),
+    ("Carburant",                                         77.28, "Shell Vémars (France)"),
+    ("Achat matériel sportif - DECATHLON",                18.00, "Decathlon Evere"),
+    ("Paiement carte VISA",                               2134.71, "Décompte n° 213"),
+    ("Paiement carte MASTERCARD",                         66.74, "Décompte n° 216 - nouveau compte carte 80845055"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Achat matériel sportif - DECATHLON",                123.00, "Decathlon Evere - remboursé par le RTC Lambermont le même jour"),
+    ("Carburant",                                         62.86, "Q8 Easy Zaventem"),
+    ("Péage autoroute France",                            73.90, "Domiciliation Autoroutes du Sud de la France"),
+    ("Carburant",                                         72.59, "Q8 Easy Zaventem"),
+    ("Parking",                                           4.20, "Parking Parkpoort, Heverlee"),
+    ("Parking",                                           3.00, "Parking Ladeuze, Louvain"),
+    ("Parking",                                           2.80, "Indigo Park Docks, Bruxelles"),
+    ("Parking",                                           5.00, "Parking Bokrijk, Genk"),
+    ("Parking",                                           5.55, "Q-Park Woluwe Esplanade"),
+    ("Parking",                                           12.00, "Brussels Expo — à confirmer (parking ou entrée)"),
+    ("Parking",                                           3.00, "Parking Grand-Place, Bruxelles"),
+ ],
+}))
