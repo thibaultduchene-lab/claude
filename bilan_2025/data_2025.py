@@ -87,3 +87,38 @@ MOIS.append(("Février", {
     ("Proximus",                                          49.98, ""),
  ],
 }))
+
+MOIS.append(("Mars", {
+ "solde_debut": 2468.17, "solde_fin": 3606.60, "extrait": "2025 - 003",
+ "entrees": [
+    ("LAM2504", 5000.00, ""),
+    ("LAM2505", 4888.80, ""),
+ ],
+ "depenses": [
+    ("Achat - NEW BS SPRL",                               290.50, "Bruxelles — commerçant à identifier"),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Repas Topogigio",                                   75.50, ""),
+    ("Parking",                                           6.30, "Brucity - Ville de Bruxelles"),
+    ("Carburant",                                         67.55, "Q8 Limal"),
+    ("Paiement carte VISA",                               7.30, "Décompte n° 060"),
+    ("Electrabel",                                        256.99, "Facture 470/3433/24753"),
+    ("Electrabel",                                        256.99, "Facture 440/7222/59244"),
+    ("Telenet",                                           149.40, ""),
+    ("Redevance de stationnement - Ville de Louvain",     58.00, "Comm. 194/3769/90294 — à confirmer (redevance ou amende)"),
+    ("Redevance de stationnement - Woluwe-Saint-Lambert", 45.00, "Comm. 602/2505/46621 — à confirmer (redevance ou amende)"),
+    ("Parking",                                           1.85, "Q-Park Woluwe Esplanade"),
+    ("Parking",                                           6.00, "T and T Parking Bruxelles"),
+    ("Carburant",                                         60.74, "Q8 Easy Zaventem"),
+    ("Parking",                                           2.67, "Commune Saint-Josse"),
+    ("Carburant",                                         50.20, "Station 15 Zemst"),
+    ("Partena",                                           3014.00, ""),
+    ("Entretien voiture - Monsieur Pneus",                919.17, ""),
+    ("Carburant",                                         70.68, "Shell Kraainem"),
+    ("Carburant",                                         16.00, "Station 15 Zemst"),
+    ("Parking",                                           16.20, "Parking Rogier"),
+    ("Parking",                                           3.20, "Woluwe-Saint-Lambert"),
+    ("Précompte salarial mars 2025 Thibault Duchène",     2250.00, ""),
+    ("SD Worx",                                           331.52, ""),
+    ("Carburant",                                         70.49, "Q8 Easy Zaventem"),
+ ],
+}))
