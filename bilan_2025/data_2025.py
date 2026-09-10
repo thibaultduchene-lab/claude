@@ -368,3 +368,36 @@ MOIS.append(("Octobre", {
     ("Consommation Lambermont",                           58.00, ""),
  ],
 }))
+
+MOIS.append(("Novembre", {
+ "solde_debut": 10958.79, "solde_fin": 3971.83, "extrait": "2025 - 011",
+ "entrees": [],   # aucun encaissement ce mois-ci
+ "depenses": [
+    ("Carburant",                                         65.29, "Q8 Easy Zaventem"),
+    ("Achat - Media Markt",                               748.00, "Woluwe-Saint-Lambert — nature de l'achat à préciser"),
+    ("Achat - Media Markt",                               39.00, "Woluwe-Saint-Lambert — nature de l'achat à préciser"),
+    ("Précompte salarial octobre 2025 Thibault Duchène",  2250.00, ""),
+    ("SD Worx",                                           331.85, ""),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Parking",                                           2.72, "Commune Saint-Josse"),
+    ("Carburant",                                         70.44, "Q8 Tervuren"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Partena",                                           1441.87, ""),
+    ("Frais comptable BDH - publication BNB",             287.70, "Remboursement des frais BNB avancés par BDH"),
+    ("Electrabel",                                        270.94, "Facture 433/7265/65993"),
+    ("Electrabel",                                        263.44, "Facture 464/6637/65902"),
+    ("Proximus",                                          143.48, ""),
+    ("Carburant",                                         65.52, "Shell Haine-Saint-Pierre"),
+    ("Parking",                                           0.90, "Schaerbeek"),
+    ("Parking",                                           2.68, "Louvain"),
+    ("Achat matériel sportif - DECATHLON",                118.50, "Decathlon Evere"),
+    ("Parking",                                           12.60, "Parking Rogier"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Carburant",                                         69.11, "Q8 Easy Zaventem"),
+    ("Parking",                                           1.85, "Q-Park Woluwe Esplanade"),
+    ("Semelles orthopédiques de travail - Podomed",       65.00, "Consultation"),
+    ("Parking",                                           5.55, "Q-Park Woluwe Esplanade"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+ ],
+}))
