@@ -134,7 +134,7 @@ MOIS.append(("Avril", {
  # Extrait arrêté au 26-04 : les opérations de fin de mois (précompte, SD Worx,
  # facture LAM) figureront sur l'extrait de mai.
  "entrees": [
-    ("Remboursement billet d'avion Lima-Bruxelles", 1683.78, "Versement de Thibault Duchène - C. Garces Trujillo"),
+    ("Remboursement billet d'avion Lima-Bruxelles", 1683.78, "Versement de Thibault Duchène (contrepartie du billet Air Europa du 13-04) — produit ou compte courant, à trancher"),
  ],
  "depenses": [
     ("Repas Exki",                                        30.30, "Exki Woluwe"),

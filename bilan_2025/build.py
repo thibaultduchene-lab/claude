@@ -1,20 +1,37 @@
 # -*- coding: utf-8 -*-
 """Génère Bilan_2025_MTCB.xlsx en reprenant la mise en forme du fichier 2024.
 
-Différences voulues par rapport à 2024 : la colonne « Preuve de paiement » est
-supprimée et la colonne « Facture » est laissée vide (à cocher à la main).
+Différences voulues par rapport à 2024 :
+  - la colonne « Preuve de paiement » est supprimée ;
+  - la colonne « Facture » est laissée vide (à cocher à la main) ;
+  - les entrées ont leur propre colonne Remarque (en 2024 elle était partagée
+    avec les dépenses, donc inutilisable dès qu'il y avait les deux) ;
+  - les lignes qui demandent un arbitrage sont surlignées en jaune.
+
+Colonnes : E Mois | F G H Entrées (Source, Montant, Remarque)
+                  | I J K L Dépenses (Source, Montant, Facture, Remarque)
 """
-import sys, copy
+import re
+import sys
+import copy
 import openpyxl
-from openpyxl.styles import Alignment
+from openpyxl.styles import Alignment, PatternFill
 from data_2025 import MOIS
 from cartes import DECOMPTES, DECOMPTES_MC
 
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
-COLS = 'EFGHIJK'               # K = Remarque, une fois « Preuve de paiement » retirée
+COLS = 'EFGHIJKL'
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
-LARGEUR_MAX = 60               # largeur max de la colonne Remarque
+LARGEUR_MAX = 60               # largeur max des colonnes Remarque
+LARGEURS = {'E': 10.29, 'F': 32.29, 'G': 9.0, 'I': 47.29, 'J': 8.43, 'K': 7.71}
+JAUNE = PatternFill('solid', fgColor='FFFF00')
+
+# une remarque contenant un de ces marqueurs = point à trancher avec le comptable
+A_TRANCHER = re.compile(
+    r"à (confirmer|identifier|préciser|vérifier|valider|joindre|traiter)"
+    r"|sans numéro|privée|compte courant|\?", re.I)
+
 
 def eclater_cartes(mois, decomptes, ligne_globale, carte):
     """Remplace la ligne globale de paiement de carte par le détail du décompte."""
@@ -30,22 +47,27 @@ def eclater_cartes(mois, decomptes, ligne_globale, carte):
             dep.extend(detail if d[0] == ligne_globale else [d])
         m['depenses'] = dep
 
+
 eclater_cartes(MOIS, DECOMPTES, 'Paiement carte VISA', 'Visa')
 eclater_cartes(MOIS, DECOMPTES_MC, 'Paiement carte MASTERCARD', 'Mastercard')
 
 wb = openpyxl.load_workbook(TPL)
 ws = wb['Feuil1']
 
-# 1. supprimer la colonne « Preuve de paiement » (K) : « Remarque » (L) devient K
-largeur_remarque = ws.column_dimensions['L'].width
-ws.delete_cols(11)
-ws.column_dimensions['K'].width = largeur_remarque
-del ws.column_dimensions['L']
+# 1. colonnes : retirer « Preuve de paiement », ajouter une Remarque pour les entrées
+ws.delete_cols(11)             # ancienne colonne K
+ws.insert_cols(8)              # nouvelle colonne H, avant les dépenses
 
 # 2. mémoriser les styles du modèle avant de vider la feuille
 sty_first = {c: copy.copy(ws[f'{c}31']._style) for c in COLS}   # 1re ligne d'un mois
-sty_row   = {c: copy.copy(ws[f'{c}7']._style)  for c in COLS}   # ligne courante
+sty_row = {c: copy.copy(ws[f'{c}7']._style) for c in COLS}      # ligne courante
 sty_total = {c: copy.copy(ws[f'{c}310']._style) for c in COLS}  # ligne de total
+for sty in (sty_first, sty_row, sty_total):                     # la colonne ajoutée
+    sty['H'] = copy.copy(sty['L'])                              # se cale sur Remarque
+
+ws['H4']._style = copy.copy(ws['G4']._style)
+ws['H5']._style = copy.copy(ws['G5']._style)
+ws['H5'] = 'Remarque'
 
 # 3. vider les anciennes données (lignes 6 à 310), garder les en-têtes 4 et 5
 ws.delete_rows(6, 305)
@@ -65,11 +87,13 @@ for i, (nom, m) in enumerate(MOIS):
         if k < len(m['entrees']):
             src, mnt, rem = m['entrees'][k]
             ws[f'F{r+k}'], ws[f'G{r+k}'] = src, mnt
+            if rem:
+                ws[f'H{r+k}'] = rem
         if k < len(m['depenses']):
             src, mnt, rem = m['depenses'][k]
-            ws[f'H{r+k}'], ws[f'I{r+k}'] = src, mnt
+            ws[f'I{r+k}'], ws[f'J{r+k}'] = src, mnt
             if rem:
-                ws[f'K{r+k}'] = rem
+                ws[f'L{r+k}'] = rem
     r += n + BLANK_AFTER_MONTH
 
 # 5. ligne de totaux (comme G310/I310 en 2024)
@@ -77,22 +101,35 @@ last = r - BLANK_AFTER_MONTH - 1
 for c in COLS:
     ws[f'{c}{r}']._style = copy.copy(sty_total[c])
 ws[f'G{r}'] = f'=SUM(G{first_data_row}:G{last})'
-ws[f'I{r}'] = f'=SUM(I{first_data_row}:I{last})'
+ws[f'J{r}'] = f'=SUM(J{first_data_row}:J{last})'
 
-for c in 'GI':
+for c in 'GJ':
     for row in range(first_data_row, r + 1):
         ws[f'{c}{row}'].number_format = '#,##0.00'
+
+for col, largeur in LARGEURS.items():
+    ws.column_dimensions[col].width = largeur
+for col in 'HL':               # les deux colonnes Remarque, avec retour à la ligne
+    longueur = max([len(str(ws[f'{col}{row}'].value)) for row in range(5, r + 1)
+                    if ws[f'{col}{row}'].value] or [0])
+    ws.column_dimensions[col].width = min(longueur + 3, LARGEUR_MAX)
+    for row in range(first_data_row, r + 1):
+        ws[f'{col}{row}'].alignment = Alignment(wrap_text=True, vertical='top')
 
 for idx in [i for i in ws.row_dimensions if i > r]:   # hauteurs résiduelles du modèle
     del ws.row_dimensions[idx]
 
-# 6. colonne Remarque : assez large pour le texte, avec retour à la ligne
-#    au-delà de LARGEUR_MAX pour ne pas déformer la feuille
-longueur = max([len(str(ws[f'K{row}'].value)) for row in range(5, r + 1)
-                if ws[f'K{row}'].value] or [0])
-ws.column_dimensions['K'].width = min(longueur + 3, LARGEUR_MAX)
-for row in range(first_data_row, r + 1):
-    ws[f'K{row}'].alignment = Alignment(wrap_text=True, vertical='top')
+# 6. surligner en jaune les lignes qui demandent un arbitrage
+n_jaune = 0
+for row in range(first_data_row, r):
+    for rem_col, cols in (('H', 'FGH'), ('L', 'IJL')):
+        rem = ws[f'{rem_col}{row}'].value
+        if rem and A_TRANCHER.search(str(rem)):
+            for c in cols:
+                ws[f'{c}{row}'].fill = JAUNE
+            n_jaune += 1
+ws['D5'] = 'Surligné en jaune = à trancher avec le comptable'
 
 wb.save(OUT)
-print(f'{OUT} écrit — données lignes {first_data_row} à {last}, totaux ligne {r}')
+print(f'{OUT} écrit — lignes {first_data_row} à {last}, totaux ligne {r}, '
+      f'{n_jaune} cellules surlignées')
