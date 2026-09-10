@@ -401,3 +401,35 @@ MOIS.append(("Novembre", {
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
  ],
 }))
+
+MOIS.append(("Décembre", {
+ "solde_debut": 3971.83, "solde_fin": 8522.89, "extrait": "2025 - 012",
+ "entrees": [
+    ("LAM2514", 4162.50, "Pas de LAM2513 encaissé — correspond peut-être au virement du 29-10 sans numéro"),
+    ("LAM2515", 5382.45, ""),
+ ],
+ "depenses": [
+    ("Précompte salarial novembre 2025 Thibault Duchène", 2250.00, ""),
+    ("SD Worx",                                           331.85, ""),
+    ("Carburant",                                         63.61, "Q8 Easy Zaventem"),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Parking",                                           4.60, "Indigo Park Docks, Bruxelles"),
+    ("Parking",                                           3.20, "Woluwe-Saint-Lambert"),
+    ("Carburant",                                         63.80, "Q8 Easy Zaventem"),
+    ("Parking",                                           6.97, "Parcbrux Ixelles, Gand"),
+    ("Parking",                                           7.00, "Parking Station, Bruges"),
+    ("Xerius",                                            399.73, "Cotisations sociales indépendant"),
+    ("Electrabel",                                        263.44, "Facture 435/0584/57839"),
+    ("Proximus",                                          153.79, ""),
+    ("Assurance RC - LRS Insurance",                      55.04, "Même montant qu'en 2024 (Liantis)"),
+    ("Carburant",                                         63.20, "Q8 Easy Zaventem"),
+    ("Parking",                                           3.70, "Q-Park Woluwe Esplanade"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Parking",                                           14.00, "Parking Grand-Place, Bruxelles"),
+    ("Parking",                                           2.60, "Parking Kinepolis, Louvain"),
+    ("Carburant",                                         63.32, "Cora Woluwe — à confirmer (carburant ou achats ?)"),
+    ("Parking",                                           3.40, "Indigo Park Docks, Bruxelles"),
+    ("Semelles orthopédiques de travail - Podomed",       210.00, "Solde après la consultation du 27-11"),
+    ("Frais comptable BDH",                               304.92, "Facture 20250644"),
+ ],
+}))
