@@ -8,12 +8,29 @@ import sys, copy
 import openpyxl
 from openpyxl.styles import Alignment
 from data_2025 import MOIS
+from cartes import DECOMPTES
 
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
 COLS = 'EFGHIJK'               # K = Remarque, une fois « Preuve de paiement » retirée
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
 LARGEUR_MAX = 60               # largeur max de la colonne Remarque
+
+def eclater_cartes(mois):
+    """Remplace chaque ligne « Paiement carte VISA » par le détail du décompte."""
+    for nom, m in mois:
+        if nom not in DECOMPTES:
+            continue
+        num, prel, lignes = DECOMPTES[nom]
+        detail = [(lib, mnt,
+                   f"Carte Visa {dt} — décompte n° {num} du {prel}" + (f" — {rem}" if rem else ""))
+                  for dt, lib, mnt, rem in lignes]
+        dep = []
+        for d in m['depenses']:
+            dep.extend(detail if d[0] == 'Paiement carte VISA' else [d])
+        m['depenses'] = dep
+
+eclater_cartes(MOIS)
 
 wb = openpyxl.load_workbook(TPL)
 ws = wb['Feuil1']
