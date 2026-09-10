@@ -1,27 +1,37 @@
 # -*- coding: utf-8 -*-
-"""Génère Bilan_2025_MTCB.xlsx en reprenant exactement la mise en forme du fichier 2024."""
+"""Génère Bilan_2025_MTCB.xlsx en reprenant la mise en forme du fichier 2024.
+
+Différences voulues par rapport à 2024 : la colonne « Preuve de paiement » est
+supprimée et la colonne « Facture » est laissée vide (à cocher à la main).
+"""
 import sys, copy
 import openpyxl
 from data_2025 import MOIS
 
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
-COLS = 'EFGHIJKL'
+COLS = 'EFGHIJK'               # K = Remarque, une fois « Preuve de paiement » retirée
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
 
 wb = openpyxl.load_workbook(TPL)
 ws = wb['Feuil1']
 
-# 1. mémoriser les styles du modèle avant de vider la feuille
+# 1. supprimer la colonne « Preuve de paiement » (K) : « Remarque » (L) devient K
+largeur_remarque = ws.column_dimensions['L'].width
+ws.delete_cols(11)
+ws.column_dimensions['K'].width = largeur_remarque
+del ws.column_dimensions['L']
+
+# 2. mémoriser les styles du modèle avant de vider la feuille
 sty_first = {c: copy.copy(ws[f'{c}31']._style) for c in COLS}   # 1re ligne d'un mois
 sty_row   = {c: copy.copy(ws[f'{c}7']._style)  for c in COLS}   # ligne courante
 sty_total = {c: copy.copy(ws[f'{c}310']._style) for c in COLS}  # ligne de total
 
-# 2. vider les anciennes données (lignes 6 à 310), garder les en-têtes 4 et 5
+# 3. vider les anciennes données (lignes 6 à 310), garder les en-têtes 4 et 5
 ws.delete_rows(6, 305)
 ws['D4'] = 'Déclaration MT Cosmetics Belgium 2025'
 
-# 3. réécrire les blocs mensuels
+# 4. réécrire les blocs mensuels
 r = 6
 first_data_row = r
 for i, (nom, m) in enumerate(MOIS):
@@ -36,14 +46,13 @@ for i, (nom, m) in enumerate(MOIS):
             src, mnt, rem = m['entrees'][k]
             ws[f'F{r+k}'], ws[f'G{r+k}'] = src, mnt
         if k < len(m['depenses']):
-            src, mnt, fac, prv, rem = m['depenses'][k]
+            src, mnt, rem = m['depenses'][k]
             ws[f'H{r+k}'], ws[f'I{r+k}'] = src, mnt
-            ws[f'J{r+k}'], ws[f'K{r+k}'] = fac, prv
             if rem:
-                ws[f'L{r+k}'] = rem
+                ws[f'K{r+k}'] = rem
     r += n + BLANK_AFTER_MONTH
 
-# 4. ligne de totaux (comme G310/I310 en 2024)
+# 5. ligne de totaux (comme G310/I310 en 2024)
 last = r - BLANK_AFTER_MONTH - 1
 for c in COLS:
     ws[f'{c}{r}']._style = copy.copy(sty_total[c])
