@@ -63,5 +63,10 @@ for c in 'GI':
     for row in range(first_data_row, r + 1):
         ws[f'{c}{row}'].number_format = '#,##0.00'
 
+# 6. élargir la colonne Remarque pour que le texte le plus long tienne dedans
+longueur = max([len(str(ws[f'K{row}'].value)) for row in range(5, r + 1)
+                if ws[f'K{row}'].value] or [0])
+ws.column_dimensions['K'].width = longueur + 3
+
 wb.save(OUT)
 print(f'{OUT} écrit — données lignes {first_data_row} à {last}, totaux ligne {r}')
