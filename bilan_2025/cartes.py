@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Détail des décomptes de carte de crédit Visa 4454 73XX XXXX 1323.
+"""Détail des décomptes de carte de crédit.
+Visa 4454 73XX XXXX 1323 (compte interne 66323968) et
+Mastercard 5480 28XX XXXX 2978 (compte interne 80845055).
 Chaque décompte est prélevé sur le compte le mois suivant : le détail remplace
 la ligne globale « Paiement carte VISA » dans le bloc du mois du prélèvement."""
 
@@ -159,5 +161,12 @@ DECOMPTES = {
 ]),
 "Septembre": ("244", "10-09", [
  ("13-08", "Transport - De Lijn",                     3.00, ""),
+]),
+}
+
+# Décomptes Mastercard (compte interne 80845055) — un seul sur l'année
+DECOMPTES_MC = {
+"Août": ("216", "13-08", [
+ ("26-07", "Carburant", 66.74, "Total Gidy (France)"),
 ]),
 }
