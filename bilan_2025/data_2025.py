@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+# Données 2025 — reprises des extraits de compte BNP Paribas Fortis
+# BE23 0019 5419 0591 — BV MT COSMETICS BELGIUM
+DUP24 = "Déjà repris dans le bilan 2024 (décembre) — à vérifier pour éviter un double comptage"
+
+MOIS = [("Janvier", {
+ "solde_debut": 1378.02, "solde_fin": 3407.94, "extrait": "2025 - 001",
+ "entrees": [
+    ("LAM2415", 4743.17, DUP24),
+    ("LAM2501", 5328.20, ""),
+    ("LAM2502", 7000.00, ""),
+ ],
+ "depenses": [
+    ("Repas Topogigio",                                   26.00,  "X", "V", "Paiement du 31-12-2024 comptabilisé le 01-01-2025 — " + DUP24),
+    ("Précompte salarial décembre 2024 Thibault Duchène", 2250.00,"V", "V", DUP24),
+    ("SD Worx",                                           330.88, "V", "V", DUP24),
+    ("Collation - Plouf et Baballe",                      8.40,   "X", "V", ""),
+    ("Electrabel",                                        256.99, "V", "V", DUP24),
+    ("Telenet",                                           149.10, "V", "V", DUP24),
+    ("Proximus",                                          82.99,  "V", "V", DUP24 + " (82,98 encodé en 2024)"),
+    ("Carburant",                                         22.90,  "X", "V", "Q8 Easy Zaventem"),
+    ("Réception marchandise - FEDEX",                     5.69,   "V", "V", ""),
+    ("Parking",                                           1.35,   "X", "V", ""),
+    ("Carburant",                                         62.79,  "X", "V", "Cora Woluwe — à confirmer (carburant ou achats ?)"),
+    ("Crédit voiture",                                    724.12, "X", "V", ""),
+    ("Frais bancaires trimestriels",                      11.25,  "X", "V", ""),
+    ("Assurance voiture",                                 431.25, "V", "V", "Paiement par domiciliation (AG Insurance)"),
+    ("Repas Topogigio",                                   22.00,  "X", "V", ""),
+    ("Carburant",                                         66.72,  "X", "V", "Q8 Easy Zaventem"),
+    ("Parking",                                           22.50,  "X", "V", "Parking Centraal Anvers"),
+    ("Parking",                                           1.80,   "X", "V", "Commune Saint-Josse"),
+    ("Electrabel",                                        256.99, "V", "V", ""),
+    ("Telenet",                                           159.10, "V", "V", ""),
+    ("Parking",                                           1.60,   "X", "V", "Woluwe-Saint-Lambert"),
+    ("Carburant",                                         71.13,  "X", "V", "Cora Woluwe — à confirmer (carburant ou achats ?)"),
+    ("Péage autoroute France",                            27.90,  "V", "V", "Domiciliation Autoroutes du Sud de la France"),
+    ("Parking",                                           7.20,   "X", "V", "Parking Rogier"),
+    ("Parking",                                           2.68,   "X", "V", ""),
+    ("Billets d'avion Pérou - Translatina Travel",        1100.00,"X", "V", "Facture de l'agence à joindre"),
+    ("Précompte salarial janvier 2025 Thibault Duchène",  2250.00,"V", "V", ""),
+    ("Billets d'avion Pérou - Translatina Travel",        42.00,  "X", "V", "Complément — facture à joindre"),
+    ("Carburant",                                         69.44,  "X", "V", "Lukoil Wezembeek"),
+    ("Impôt des sociétés",                                4517.28,"X", "V", "Communication 202/9987/63859"),
+    ("Frais comptable BDH",                               1125.30,"V", "V", "Facture 20240512"),
+    ("SD Worx",                                           331.52, "V", "V", ""),
+    ("Frais comptable BDH",                               290.40, "V", "V", "Facture 20240616"),
+    ("Frais comptable BDH",                               242.00, "V", "V", "Facture 20240705"),
+    ("Proximus",                                          70.18,  "V", "V", ""),
+ ],
+})]
