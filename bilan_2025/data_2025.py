@@ -229,3 +229,36 @@ MOIS.append(("Juin", {
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
  ],
 }))
+
+MOIS.append(("Juillet", {
+ "solde_debut": 4930.12, "solde_fin": 8568.89, "extrait": "2025 - 007",
+ "entrees": [
+    ("Remboursement paiement à Sandaya", 1775.40, "Versement de Thibault Duchène — dépense privée payée par la société ?"),
+    ("Prestations juillet 2025 - RTC Lambermont", 7130.00, "Communication sans numéro de facture LAM"),
+ ],
+ "depenses": [
+    ("Précompte salarial juin 2025 Thibault Duchène",     2250.00, ""),
+    ("SD Worx",                                           331.99, ""),
+    ("Proximus",                                          84.91, ""),
+    ("Crédit voiture",                                    724.12, ""),
+    ("Frais bancaires trimestriels",                      11.25, ""),
+    ("Intérêt crédit",                                    0.51, "Intérêts nets au 01-07"),
+    ("Carburant",                                         60.86, "Q8 Easy Zaventem"),
+    ("Assurance voiture",                                 458.66, "Domiciliation AG Insurance — prime passée de 431,25 à 458,66"),
+    ("Paiement carte VISA",                               228.86, "Décompte n° 182"),
+    ("Terrain de tennis - Orée ASBL",                     8.50, "À confirmer (terrain ou consommation)"),
+    ("Carburant",                                         56.98, "Q8 Easy Zaventem"),
+    ("Carburant",                                         62.27, "Q8 Easy Zaventem"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Péage autoroute France",                            34.40, "Domiciliation Autoroutes du Sud de la France"),
+    ("Electrabel",                                        356.79, "Facture 455/1399/88731 — montant en hausse (256,99 les mois précédents)"),
+    ("Telenet",                                           153.42, ""),
+    ("Redevance de stationnement - Saint-Josse",          100.00, "Comm. 500/2300/37391 — à confirmer (redevance ou amende)"),
+    ("Carburant",                                         60.90, "Maes Schaerbeek"),
+    ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
+    ("Repas Topogigio",                                   231.50, ""),
+    ("Carburant",                                         43.01, "Esso Rumst"),
+    ("Parking",                                           1.70, "Indigo, Tours (France)"),
+    ("Parking",                                           2.80, "Commune de Soulac-sur-Mer (France)"),
+ ],
+}))
