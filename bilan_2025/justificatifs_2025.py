@@ -43,6 +43,7 @@ PHOTOS = [
 # existante (communication structurée) sert déjà de référence.
 ENGIE = "Facture ENGIE en main"
 PARTENA = "Décompte Partena en main"
+TELENET = "Facture Telenet en main"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
 PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
@@ -70,6 +71,14 @@ JUSTIFICATIFS = [
  ('Décembre', 'Précompte salarial novembre 2025 Thibault Duchène', 2250, PRECOMPTE),
  ('Décembre', 'SD Worx', 331.85, SDWORX),
  ('Décembre', 'Précompte salarial décembre 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Janvier', "Telenet", 159.1, TELENET),
+ ('Février', "Telenet", 149.1, TELENET),
+ ('Mars', "Telenet", 149.4, TELENET),
+ ('Avril', "Telenet", 149.1, TELENET),
+ ('Mai', "Telenet", 149.1, TELENET),
+ ('Juin', "Telenet", 155.52, TELENET),
+ ('Juillet', "Telenet", 153.42, TELENET),
+ ('Septembre', "Telenet", 153.42, TELENET),
  ("Février",   "Partena", 1441.87, PARTENA),
  ("Mars",      "Partena", 3014.00, PARTENA),
  ("Juin",      "Partena", 1441.87, PARTENA),
