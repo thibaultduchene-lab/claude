@@ -44,6 +44,7 @@ PHOTOS = [
 ENGIE = "Facture ENGIE en main"
 PARTENA = "Décompte Partena en main"
 BDH = "Facture BDH en main, chargée dans Billtobox"
+FARYS = "Facture Farys en main, chargée dans Billtobox"
 TELENET = "Facture Telenet en main"
 PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
 PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
@@ -95,6 +96,10 @@ JUSTIFICATIFS = [
  ("Octobre",   "Proximus", 148.72, PROXIMUS),
  ("Novembre",  "Proximus", 143.48, PROXIMUS),
  ("Décembre",  "Proximus", 153.79, PROXIMUS),
+ ('Février', 'Farys (eau)', 290, FARYS),
+ ('Mai', 'Farys (eau)', 290, FARYS),
+ ('Septembre', 'Farys (eau)', 300, FARYS),
+ ('Octobre', 'Farys (eau)', 172.14, FARYS),
  ("Février",   "Partena", 1441.87, PARTENA),
  ("Mars",      "Partena", 3014.00, PARTENA),
  ("Juin",      "Partena", 1441.87, PARTENA),
