@@ -42,8 +42,14 @@ PHOTOS = [
 # Pièces en main sans PDF transmis : la colonne Facture passe à V, la remarque
 # existante (communication structurée) sert déjà de référence.
 ENGIE = "Facture ENGIE en main"
+PARTENA = "Décompte Partena en main"
 
 JUSTIFICATIFS = [
+ ("Février",   "Partena", 1441.87, PARTENA),
+ ("Mars",      "Partena", 3014.00, PARTENA),
+ ("Juin",      "Partena", 1441.87, PARTENA),
+ ("Septembre", "Partena", 1441.87, PARTENA),
+ ("Novembre",  "Partena", 1441.87, PARTENA),
  ("Janvier",   "Electrabel", 256.99, ENGIE),
  ("Février",   "Electrabel", 256.99, ENGIE),
  ("Mars",      "Electrabel", 256.99, ENGIE),
