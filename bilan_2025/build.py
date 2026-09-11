@@ -47,7 +47,7 @@ FORCER_JAUNE = {"Billets d'avion Pérou - Translatina Travel"}
 
 A_TRANCHER = re.compile(
     r"à (confirmer|identifier|préciser|vérifier|valider|joindre|traiter)"
-    r"|sans numéro|privée|compte courant|\?", re.I)
+    r"|sans numéro|privée|compte courant|documenter|\?", re.I)
 
 
 def eclater_cartes(mois, decomptes, ligne_globale, carte):
