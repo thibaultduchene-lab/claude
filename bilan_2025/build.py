@@ -42,8 +42,16 @@ LARGEURS = {'E': 10.29, 'F': 32.29, 'G': 9.0, 'I': 47.29, 'J': 8.43, 'K': 7.71}
 JAUNE = PatternFill('solid', fgColor='FFFF00')
 
 # Postes pour lesquels le comptable ne demande pas de justificatif : la colonne
-# Facture reçoit un X, comme en 2024.
-SANS_FACTURE = {'Carburant'}
+# Facture reçoit un X, comme en 2024. Carburant, parkings, transports en commun,
+# crédit voiture et impôts.
+SANS_FACTURE = {'Carburant', 'Crédit voiture', 'Versement impôts anticipé',
+                'Impôt des sociétés', 'Précompte mobilier',
+                'Vlaamse Belastingsdienst - taxe de circulation'}
+PREFIXES_SANS_FACTURE = ('Parking', 'Transport')
+
+
+def sans_facture(libelle):
+    return libelle in SANS_FACTURE or str(libelle).startswith(PREFIXES_SANS_FACTURE)
 
 # une remarque contenant un de ces marqueurs = point à trancher avec le comptable
 # lignes que Thibault veut garder en jaune même si la remarque ne le dit pas
@@ -172,7 +180,7 @@ if manquants:
 
 n_x = 0
 for row in range(first_data_row, r):
-    if ws[f'I{row}'].value in SANS_FACTURE and not ws[f'K{row}'].value:
+    if sans_facture(ws[f'I{row}'].value) and not ws[f'K{row}'].value:
         ws[f'K{row}'] = 'X'
         n_x += 1
 
