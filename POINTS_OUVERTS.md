@@ -74,3 +74,7 @@ décompte à venir : cut-off à valider.
 - La facture BDH 20250542 de 1.179,75, facture 2025 payée le 28-01-2026, est
   restée sur l'exercice 2026, conformément au traitement des factures BDH de
   2024 payées en janvier 2025.
+- **Question posée à BDH** : ces factures doivent-elles suivre la date de
+  facture ou la date de paiement ? Si BDH retient la date de facture, trois
+  factures 2024 (1.657,70) sortent du bilan 2025 et la facture 20250542
+  (1.179,75) y entre — le résultat 2025 s'améliorerait de 477,95.
