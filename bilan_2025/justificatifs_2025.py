@@ -49,7 +49,6 @@ TELENET = "Facture Telenet en main"
 PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
 PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
                "avec sa note de crédit")
-PROXIMUS_MAIL = "Facture Proximus reçue par mail, à charger dans Billtobox"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
 PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
@@ -91,11 +90,11 @@ JUSTIFICATIFS = [
  ("Décembre",  "Frais comptable BDH", 1179.75, BDH),
  ("Décembre",  "Réception marchandise - FEDEX", 11.84,
   "2025-12-23_FedEx_11.84.pdf"),
- ("Février",   "Proximus", 49.98,  PROXIMUS_MAIL),
- ("Avril",     "Proximus", 141.50, PROXIMUS_MAIL),
- ("Mai",       "Proximus", 71.54,  PROXIMUS_MAIL),
- ("Juin",      "Proximus", 64.94,  PROXIMUS_MAIL),
- ("Juillet",   "Proximus", 84.91,  PROXIMUS_MAIL),
+ ("Février",   "Proximus", 49.98,  PROXIMUS  ),
+ ("Avril",     "Proximus", 141.50, PROXIMUS  ),
+ ("Mai",       "Proximus", 71.54,  PROXIMUS  ),
+ ("Juin",      "Proximus", 64.94,  PROXIMUS  ),
+ ("Juillet",   "Proximus", 84.91,  PROXIMUS  ),
  ("Juillet",   "Proximus", 109.59, PROXIMUS),
  ("Septembre", "Proximus", 70.62,  PROXIMUS_NC),
  ("Septembre", "Proximus", 161.83, PROXIMUS_NC),
