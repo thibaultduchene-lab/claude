@@ -53,6 +53,15 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   et débité du compte de la société. Traitement habituel pour des cotisations
   sociales de dirigeant, mais à signaler à BDH.
 - **Farys** : même question que pour ENGIE, à vérifier.
+- **Publicité Facebook : compte publicitaire d'un tiers.** Les 27 débits
+  d'avril à juillet 2025 (688,03) ont été engagés depuis un compte Facebook
+  qui n'est pas celui de Thibault (signalé le 11-09-2026). Les reçus Meta
+  seront donc au nom du titulaire de ce compte, et non de la société, alors
+  que la carte débitée est bien celle de la société. Deux questions pour BDH :
+  la dépense est-elle déductible dans ces conditions, et faut-il la refacturer
+  ou la requalifier ? Le numéro de TVA de la société n'est vraisemblablement
+  pas enregistré sur ce compte publicitaire, donc TVA irlandaise probablement
+  facturée et irrécupérable.
 
 ## 4. Énergie — acomptes et décompte
 
