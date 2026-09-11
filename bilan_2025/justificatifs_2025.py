@@ -43,8 +43,33 @@ PHOTOS = [
 # existante (communication structurée) sert déjà de référence.
 ENGIE = "Facture ENGIE en main"
 PARTENA = "Décompte Partena en main"
+SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
+PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
 JUSTIFICATIFS = [
+ ('Janvier', 'Précompte salarial janvier 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Janvier', 'SD Worx', 331.52, SDWORX),
+ ('Février', 'Précompte salarial février 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Février', 'SD Worx', 331.52, SDWORX),
+ ('Mars', 'Précompte salarial mars 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Mars', 'SD Worx', 331.52, SDWORX),
+ ('Mai', 'Précompte salarial avril 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Mai', 'SD Worx', 331.99, SDWORX),
+ ('Juin', 'Précompte salarial mai 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Juin', 'SD Worx', 331.99, SDWORX),
+ ('Juillet', 'Précompte salarial juin 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Juillet', 'SD Worx', 331.99, SDWORX),
+ ('Août', 'Précompte salarial juillet 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Août', 'SD Worx', 331.79, SDWORX),
+ ('Septembre', 'Précompte salarial août 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Septembre', 'SD Worx', 331.79, SDWORX),
+ ('Octobre', 'Précompte salarial septembre 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Octobre', 'SD Worx', 331.79, SDWORX),
+ ('Novembre', 'Précompte salarial octobre 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Novembre', 'SD Worx', 331.85, SDWORX),
+ ('Décembre', 'Précompte salarial novembre 2025 Thibault Duchène', 2250, PRECOMPTE),
+ ('Décembre', 'SD Worx', 331.85, SDWORX),
+ ('Décembre', 'Précompte salarial décembre 2025 Thibault Duchène', 2250, PRECOMPTE),
  ("Février",   "Partena", 1441.87, PARTENA),
  ("Mars",      "Partena", 3014.00, PARTENA),
  ("Juin",      "Partena", 1441.87, PARTENA),
