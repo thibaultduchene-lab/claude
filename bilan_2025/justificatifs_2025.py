@@ -50,6 +50,7 @@ PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
 PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
                "avec sa note de crédit")
 ULYS = "Facture Ulys/ASF en main"
+TRANSLATINA = "Facture Translatina Travel en main — rattachement privé/société à trancher"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
 PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
@@ -91,6 +92,8 @@ JUSTIFICATIFS = [
  ("Décembre",  "Frais comptable BDH", 1179.75, BDH),
  ("Décembre",  "Réception marchandise - FEDEX", 11.84,
   "2025-12-23_FedEx_11.84.pdf"),
+ ("Janvier",   "Billets d'avion Pérou - Translatina Travel", 1100.00, TRANSLATINA),
+ ("Janvier",   "Billets d'avion Pérou - Translatina Travel", 42.00,   TRANSLATINA),
  ("Juillet",   "Péage autoroute France", 34.40,  ULYS),
  ("Août",      "Péage autoroute France", 73.90,  ULYS),
  ("Septembre", "Péage autoroute France", 101.20, ULYS),
