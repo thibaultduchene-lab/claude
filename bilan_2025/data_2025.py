@@ -391,7 +391,7 @@ MOIS.append(("Novembre", {
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
     ("Partena",                                           1441.87, ""),
     ("Frais comptable BDH - publication BNB",             287.70, "Remboursement des frais BNB avancés par BDH"),
-    ("Electrabel",                                        270.94, "Facture 433/7265/65993 — 2e facture du mois, acompte ou décompte à vérifier"),
+    ("Electrabel",                                        270.94, "Acompte d'août payé en retard le 18-11 : 263,44 + 7,50 de frais de rappel — facture 433/7265/65993"),
     ("Electrabel",                                        263.44, "Facture 464/6637/65902"),
     ("Proximus",                                          143.48, ""),
     ("Carburant",                                         65.52, "Shell Haine-Saint-Pierre"),
