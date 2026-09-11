@@ -14,14 +14,27 @@ Colonnes : E Mois | F G H Entrées (Source, Montant, Remarque)
 import re
 import sys
 import copy
+import importlib
 import openpyxl
 from openpyxl.styles import Alignment, PatternFill
-from data_2025 import MOIS
-from cartes import DECOMPTES, DECOMPTES_MC
-from justificatifs import JUSTIFICATIFS
-
+ANNEE = sys.argv[1] if len(sys.argv) > 1 else '2025'
+OUT = sys.argv[2] if len(sys.argv) > 2 else f'Bilan_{ANNEE}_MTCB.xlsx'
 TPL = '/root/.claude/uploads/a796c884-0d6f-5120-8cad-e2cfd2d80b96/f5e00871-Bilan_2024_MTCB.xlsx'
-OUT = sys.argv[1] if len(sys.argv) > 1 else 'Bilan_2025_MTCB.xlsx'
+
+
+def charger(module, defauts):
+    """Décomptes de carte et justificatifs : absents d'une année qu'on ouvre."""
+    try:
+        m = importlib.import_module(module)
+    except ModuleNotFoundError:
+        return [val for _, val in defauts]
+    return [getattr(m, nom, val) for nom, val in defauts]
+
+
+MOIS = importlib.import_module(f'data_{ANNEE}').MOIS
+DECOMPTES, DECOMPTES_MC = charger(f'cartes_{ANNEE}',
+                                  [('DECOMPTES', {}), ('DECOMPTES_MC', {})])
+(JUSTIFICATIFS,) = charger(f'justificatifs_{ANNEE}', [('JUSTIFICATIFS', [])])
 COLS = 'EFGHIJKL'
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
 LARGEUR_MAX = 60               # largeur max des colonnes Remarque
@@ -75,7 +88,7 @@ ws['H5'] = 'Remarque'
 
 # 3. vider les anciennes données (lignes 6 à 310), garder les en-têtes 4 et 5
 ws.delete_rows(6, 305)
-ws['D4'] = 'Déclaration MT Cosmetics Belgium 2025'
+ws['D4'] = f'Déclaration MT Cosmetics Belgium {ANNEE}'
 
 # 4. réécrire les blocs mensuels
 r = 6
