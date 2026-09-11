@@ -449,7 +449,7 @@ MOIS.append(("Décembre", {
     ("Semelles orthopédiques de travail - Podomed",       210.00, "Solde après la consultation du 27-11"),
     ("Frais comptable BDH",                               304.92, "Facture 20250644"),
     ("Frais comptable BDH",                               1179.75,
-     "Facture 20250542, datée de 2025 mais payée le 28-01-2026 — rattachée à l'exercice de la facture"),
+     "Facture 20250542, datée de 2025 et payée le 28-01-2026 — rattachée à l'exercice de la facture, placée en décembre"),
     ("Réception marchandise - FEDEX",                     11.84,
      "Facture 799056072 du 23-12-2025, payée le 10-02-2026 — rattachée à l'exercice de la facture"),
     ("Précompte salarial décembre 2025 Thibault Duchène", 2250.00, DEC25),

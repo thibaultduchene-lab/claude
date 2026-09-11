@@ -81,8 +81,8 @@ décompte à venir : cut-off à valider.
   10-02-2026. Les deux quittent le bilan 2026.
 - Résultat 2025 : de +2.915,81 à **+3.381,92**. Résultat 2026 provisoire :
   de −284,70 à **+906,89**.
-- La facture BDH 20250542 est placée en décembre faute de connaître sa date
-  exacte : **à ajuster** si elle porte un autre mois.
+- La facture BDH 20250542 est placée en décembre 2025 : validé par Thibault
+  le 11-09-2026.
 - **À vérifier au fil des pièces qui arrivent** : toute facture datée de 2025
   payée en 2026, ou datée de 2024 payée en 2025, doit suivre le même chemin.
   Les candidats sont les fournisseurs récurrents (Electrabel, Farys, Proximus)
