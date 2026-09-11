@@ -2,6 +2,10 @@
 # Données 2026 — bilan provisoire, repris des extraits BNP Paribas Fortis
 # BE23 0019 5419 0591 — BV MT COSMETICS BELGIUM
 #
+# Règle BDH : rattachement à la date de facture. Deux pièces datées de 2025
+# mais payées début 2026 (BDH 20250542 de 1.179,75 et FedEx 799056072 de 11,84)
+# sont donc portées au bilan 2025 et retirées d'ici.
+#
 # Même convention qu'en 2025 : les charges de décembre 2025 débitées début
 # janvier 2026 (précompte salarial 2.250,00 et SD Worx 331,85) sont comptées
 # dans le bilan 2025 et donc EXCLUES ici. L'extrait 2026-001 ne se rapproche
@@ -32,7 +36,6 @@ MOIS.append(("Janvier", {
     ("Proximus",                                          184.72, ""),
     ("Parking",                                           11.00, "Parking Grand-Place, Bruxelles"),
     ("Carburant",                                         64.57, "Shell Kraainem"),
-    ("Frais comptable BDH",                               1179.75, "Facture 20250542 — facture 2025 payée en 2026"),
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
     ("Parking",                                           1.35, "Schaerbeek"),
  ],
@@ -59,7 +62,6 @@ MOIS.append(("Février", {
     ('Parking', 10.2, ''),
     ('Abonnement club David Lloyd', 1061.0, 'Sterrebeek — usage professionnel à confirmer'),
     ('Electrabel', 263.44, ''),
-    ('Réception marchandise - FEDEX', 11.84, ''),
     ('Parking', 3.8, ''),
     ('Carburant', 64.24, ''),
     ('Parking', 7.6, ''),

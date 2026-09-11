@@ -10,6 +10,11 @@
 # Symétriquement, les charges de décembre 2025 débitées début janvier 2026
 # (précompte salarial et SD Worx) sont INCLUSES dans décembre 2025 : l'extrait
 # 2025-012 ne se rapproche donc pas non plus.
+#
+# Règle confirmée par BDH : c'est la DATE DE FACTURE qui commande, pas la date
+# de paiement. En conséquence, trois factures BDH datées de 2024 mais payées le
+# 30-01-2025 sortent de janvier (1.657,70), et deux factures datées de 2025 mais
+# payées début 2026 entrent en décembre (BDH 1.179,75 et FedEx 11,84).
 
 DEC25 = "Payé le 04/05-01-2026 mais rattaché à décembre 2025 (même règle qu'en 2024)"
 
@@ -50,10 +55,7 @@ MOIS.append(("Janvier", {
     ("Billets d'avion Pérou - Translatina Travel",        42.00, "Avance - remboursé plus tard"),
     ("Carburant",                                         69.44, "Lukoil Wezembeek"),
     ("Impôt des sociétés",                                4517.28, "Communication 202/9987/63859"),
-    ("Frais comptable BDH",                               1125.30, "Facture 20240512"),
     ("SD Worx",                                           331.52, ""),
-    ("Frais comptable BDH",                               290.40, "Facture 20240616"),
-    ("Frais comptable BDH",                               242.00, "Facture 20240705"),
     ("Proximus",                                          70.18, "Facture 750/1364/96037"),
  ],
 }))
@@ -446,6 +448,10 @@ MOIS.append(("Décembre", {
     ("Parking",                                           3.40, "Indigo Park Docks, Bruxelles"),
     ("Semelles orthopédiques de travail - Podomed",       210.00, "Solde après la consultation du 27-11"),
     ("Frais comptable BDH",                               304.92, "Facture 20250644"),
+    ("Frais comptable BDH",                               1179.75,
+     "Facture 20250542, datée de 2025 mais payée le 28-01-2026 — rattachée à l'exercice de la facture"),
+    ("Réception marchandise - FEDEX",                     11.84,
+     "Facture 799056072 du 23-12-2025, payée le 10-02-2026 — rattachée à l'exercice de la facture"),
     ("Précompte salarial décembre 2025 Thibault Duchène", 2250.00, DEC25),
     ("SD Worx",                                           331.85, DEC25),
  ],

@@ -71,10 +71,19 @@ décompte à venir : cut-off à valider.
 - Les charges de décembre 2025 débitées début janvier 2026 (précompte
   salarial 2.250,00 et SD Worx 331,85) sont comptées dans le bilan 2025, par
   symétrie avec ce qui avait été fait fin 2024.
-- La facture BDH 20250542 de 1.179,75, facture 2025 payée le 28-01-2026, est
-  restée sur l'exercice 2026, conformément au traitement des factures BDH de
-  2024 payées en janvier 2025.
-- **Question posée à BDH** : ces factures doivent-elles suivre la date de
-  facture ou la date de paiement ? Si BDH retient la date de facture, trois
-  factures 2024 (1.657,70) sortent du bilan 2025 et la facture 20250542
-  (1.179,75) y entre — le résultat 2025 s'améliorerait de 477,95.
+**Règle tranchée par BDH : rattachement à la DATE DE FACTURE.** Appliquée le
+11-09-2026 aux deux bilans. Conséquences :
+
+- Sorties du bilan 2025 : les trois factures BDH datées de 2024 (20240512,
+  20240616, 20240705) payées le 30-01-2025, soit 1.657,70.
+- Entrées au bilan 2025 : la facture BDH 20250542 (1.179,75) payée le
+  28-01-2026 et la facture FedEx 799056072 du 23-12-2025 (11,84) payée le
+  10-02-2026. Les deux quittent le bilan 2026.
+- Résultat 2025 : de +2.915,81 à **+3.381,92**. Résultat 2026 provisoire :
+  de −284,70 à **+906,89**.
+- La facture BDH 20250542 est placée en décembre faute de connaître sa date
+  exacte : **à ajuster** si elle porte un autre mois.
+- **À vérifier au fil des pièces qui arrivent** : toute facture datée de 2025
+  payée en 2026, ou datée de 2024 payée en 2025, doit suivre le même chemin.
+  Les candidats sont les fournisseurs récurrents (Electrabel, Farys, Proximus)
+  dont les paiements de début 2026 pourraient couvrir des factures de fin 2025.
