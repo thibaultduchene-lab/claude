@@ -128,4 +128,7 @@ valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
   de 2024 (confirmé par Thibault le 11-09-2026) : la ligne quitte le bilan
   2025. Les trois autres (34,40 juin, 73,90 juillet, 101,20 août) restent.
   À signaler : ces 27,90 ne figurent dans aucun des deux bilans, le bilan 2024
-  ayant été établi sur la date de paiement.
+  ayant été établi sur la date de paiement. Thibault a malgré tout chargé la
+  facture dans Billtobox le 11-09-2026 : c'est à BDH de décider s'il la
+  rattache à 2024, à 2025, ou s'il la laisse tomber. Même situation pour les
+  trois factures BDH de 2024 (1.657,70), où l'enjeu est autrement plus lourd.
