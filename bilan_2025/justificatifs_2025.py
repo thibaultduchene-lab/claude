@@ -49,6 +49,10 @@ TELENET = "Facture Telenet en main"
 PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
 PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
                "avec sa note de crédit")
+ULYS = "Facture Ulys/ASF en main"
+# La facture de janvier porte la consommation de décembre 2024 mais est
+# émise en 2025 : elle reste dans cet exercice (règle de la date de facture).
+ULYS_DEC = "Facture Ulys/ASF en main — consommation 12/2024, facture datée 2025"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
 PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
@@ -90,6 +94,10 @@ JUSTIFICATIFS = [
  ("Décembre",  "Frais comptable BDH", 1179.75, BDH),
  ("Décembre",  "Réception marchandise - FEDEX", 11.84,
   "2025-12-23_FedEx_11.84.pdf"),
+ ("Janvier",   "Péage autoroute France", 27.90,  ULYS_DEC),
+ ("Juillet",   "Péage autoroute France", 34.40,  ULYS),
+ ("Août",      "Péage autoroute France", 73.90,  ULYS),
+ ("Septembre", "Péage autoroute France", 101.20, ULYS),
  ("Février",   "Proximus", 49.98,  PROXIMUS  ),
  ("Avril",     "Proximus", 141.50, PROXIMUS  ),
  ("Mai",       "Proximus", 71.54,  PROXIMUS  ),
