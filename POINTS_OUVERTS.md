@@ -9,7 +9,7 @@ une opération absente du bilan mais qui concerne la société.
 | Sens | Objet | Montant | Statut |
 |---|---|---|---|
 | Société doit à T. Duchène | Apport « approvisionnement compte » du 13-06-2025 | 1.500,00 | jamais remboursé |
-| Société doit à T. Duchène | Facture Proximus 7504645054 (juillet 2025) payée par QR code depuis le compte privé | 109,59 | hors bilan, aucune sortie du compte société |
+| Société doit à T. Duchène | Facture Proximus 7504645054 (juillet 2025) payée par QR code depuis le compte privé | 109,59 | inscrite au bilan de juillet en charge, avec sa contrepartie en entrée |
 | T. Duchène doit à la société | Billets Translatina Travel des 24 et 27-01-2025 | 1.142,00 | jamais remboursés — voyage Pérou privé ou professionnel ? |
 
 **Solde net : la société doit 467,59 €** si le voyage au Pérou est privé,

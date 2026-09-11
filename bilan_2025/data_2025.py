@@ -238,7 +238,13 @@ MOIS.append(("Juin", {
 
 MOIS.append(("Juillet", {
  "solde_debut": 4930.12, "solde_fin": 8568.89, "extrait": "2025 - 007",
+ # La facture Proximus 7504645054 a été payée par QR code depuis le compte privé
+ # de T. Duchène : elle n'apparaît sur aucun extrait. Elle est inscrite ici en
+ # charge, avec sa contrepartie en entrée, de sorte que le mois se rapproche
+ # toujours du solde bancaire.
  "entrees": [
+    ("Prise en charge par T. Duchène - facture Proximus 7504645054", 109.59,
+     "Contrepartie de la facture payée à titre privé — à traiter en compte courant"),
     ("Remboursement paiement à Sandaya", 1775.40, "Versement de Thibault Duchène — dépense privée payée par la société ?"),
     ("LAM2509", 7130.00, "Virement du 24-07, communication « Prestations juillet 2025 »"),
  ],
@@ -246,6 +252,8 @@ MOIS.append(("Juillet", {
     ("Précompte salarial juin 2025 Thibault Duchène",     2250.00, ""),
     ("SD Worx",                                           331.99, ""),
     ("Proximus",                                          84.91, "Facture 750/4054/27527"),
+    ("Proximus",                                          109.59,
+     "Facture 7504645054 payée par QR code depuis le compte privé de T. Duchène — hors extrait bancaire"),
     ("Crédit voiture",                                    724.12, ""),
     ("Frais bancaires trimestriels",                      11.25, ""),
     ("Intérêt crédit",                                    0.51, "Intérêts nets au 01-07"),
