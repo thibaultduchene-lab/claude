@@ -41,6 +41,10 @@ LARGEUR_MAX = 60               # largeur max des colonnes Remarque
 LARGEURS = {'E': 10.29, 'F': 32.29, 'G': 9.0, 'I': 47.29, 'J': 8.43, 'K': 7.71}
 JAUNE = PatternFill('solid', fgColor='FFFF00')
 
+# Postes pour lesquels le comptable ne demande pas de justificatif : la colonne
+# Facture reçoit un X, comme en 2024.
+SANS_FACTURE = {'Carburant'}
+
 # une remarque contenant un de ces marqueurs = point à trancher avec le comptable
 # lignes que Thibault veut garder en jaune même si la remarque ne le dit pas
 FORCER_JAUNE = {"Billets d'avion Pérou - Translatina Travel"}
@@ -165,6 +169,12 @@ for row in range(first_data_row, r):
 manquants = set(attendus) - trouves
 if manquants:
     raise SystemExit(f'justificatif sans ligne correspondante : {manquants}')
+
+n_x = 0
+for row in range(first_data_row, r):
+    if ws[f'I{row}'].value in SANS_FACTURE and not ws[f'K{row}'].value:
+        ws[f'K{row}'] = 'X'
+        n_x += 1
 
 wb.save(OUT)
 print(f'{OUT} écrit — lignes {first_data_row} à {last}, totaux ligne {r}, '
