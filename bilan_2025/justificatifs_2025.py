@@ -39,7 +39,23 @@ PHOTOS = [
  ("e6aeb750", "2025-12-23_FedEx_11.84_SANS-CORRESPONDANCE.pdf"),
 ]
 
+# Pièces en main sans PDF transmis : la colonne Facture passe à V, la remarque
+# existante (communication structurée) sert déjà de référence.
+ENGIE = "Facture ENGIE en main"
+
 JUSTIFICATIFS = [
+ ("Janvier",   "Electrabel", 256.99, ENGIE),
+ ("Février",   "Electrabel", 256.99, ENGIE),
+ ("Mars",      "Electrabel", 256.99, ENGIE),
+ ("Avril",     "Electrabel", 256.99, ENGIE),
+ ("Mai",       "Electrabel", 256.99, ENGIE),
+ ("Juin",      "Electrabel", 256.99, ENGIE),
+ ("Juillet",   "Electrabel", 356.79, "Décompte annuel ENGIE en main"),
+ ("Septembre", "Electrabel", 263.44, ENGIE),
+ ("Octobre",   "Electrabel", 263.44, ENGIE),
+ ("Novembre",  "Electrabel", 270.94, ENGIE),
+ ("Novembre",  "Electrabel", 263.44, ENGIE),
+ ("Décembre",  "Electrabel", 263.44, ENGIE),
  ("Janvier",   "Repas Topogigio",                                    22.00,  "2025-01-10_RTCL-Lambermont_22.00.pdf"),
  ("Février",   "Achat vêtements sport - NIKE Maasmechelen",          141.47, "2025-02-01_Nike-Maasmechelen_141.47.pdf"),
  ("Février",   "Achat vêtements sport - Tommy Hilfiger Maasmechelen",210.49, "2025-02-01_TommyHilfiger-Maasmechelen_210.49.pdf"),

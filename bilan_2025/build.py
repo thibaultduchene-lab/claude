@@ -158,7 +158,8 @@ for row in range(first_data_row, r):
     if cle not in attendus:
         continue
     ws[f'K{row}'] = 'V'
-    note = f"Justificatif : {attendus[cle]}"
+    piece = attendus[cle]
+    note = f"Justificatif : {piece}" if piece.endswith('.pdf') else piece
     ws[f'L{row}'] = f"{ws[f'L{row}'].value} — {note}" if ws[f'L{row}'].value else note
     trouves.add(cle)
 manquants = set(attendus) - trouves
