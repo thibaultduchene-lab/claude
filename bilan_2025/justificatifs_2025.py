@@ -83,6 +83,8 @@ JUSTIFICATIFS = [
  ('Juin', "Telenet", 155.52, TELENET),
  ('Juillet', "Telenet", 153.42, TELENET),
  ('Septembre', "Telenet", 153.42, TELENET),
+ ("Novembre",  "Frais comptable BDH - publication BNB", 287.70,
+  "Pièce BDH en main, chargée dans Billtobox"),
  ("Décembre",  "Frais comptable BDH", 304.92, BDH),
  ("Juillet",   "Proximus", 109.59, PROXIMUS),
  ("Septembre", "Proximus", 70.62,  PROXIMUS_NC),
