@@ -43,6 +43,7 @@ PHOTOS = [
 # existante (communication structurée) sert déjà de référence.
 ENGIE = "Facture ENGIE en main"
 PARTENA = "Décompte Partena en main"
+BDH = "Facture BDH en main, chargée dans Billtobox"
 TELENET = "Facture Telenet en main"
 PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
 PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
@@ -82,6 +83,7 @@ JUSTIFICATIFS = [
  ('Juin', "Telenet", 155.52, TELENET),
  ('Juillet', "Telenet", 153.42, TELENET),
  ('Septembre', "Telenet", 153.42, TELENET),
+ ("Décembre",  "Frais comptable BDH", 304.92, BDH),
  ("Juillet",   "Proximus", 109.59, PROXIMUS),
  ("Septembre", "Proximus", 70.62,  PROXIMUS_NC),
  ("Septembre", "Proximus", 161.83, PROXIMUS_NC),
