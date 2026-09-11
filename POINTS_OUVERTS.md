@@ -48,6 +48,10 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   Point le plus lourd de la liste : 3.480,42 sur l'exercice.
 - **Proximus : facture au nom de la société**, avec son numéro de TVA
   (BE 0734.616.335) — rien à redire de ce côté.
+- **Partena : au nom du gérant, et c'est normal.** L'avis d'échéance du
+  24-10-2025 est établi au nom de « Duchène Thibault » en tant qu'indépendant,
+  et débité du compte de la société. Traitement habituel pour des cotisations
+  sociales de dirigeant, mais à signaler à BDH.
 - **Farys** : même question que pour ENGIE, à vérifier.
 
 ## 4. Énergie — acomptes et décompte
@@ -106,3 +110,9 @@ valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
 - **Telenet : réglé.** La dernière facture date d'août 2025, payée le
   01-09-2025. L'absence de paiement d'octobre à décembre est normale, il n'y a
   rien à récupérer.
+- **ENGIE et Proximus : vérifiés.** Factures de décembre 2025 datées des 8 et
+  9 décembre, payées le 16-12-2025. Rien à basculer.
+- **Partena : vérifié.** L'avis du 24-10-2025 couvre le 4e trimestre 2025,
+  payé le 18-11-2025, et atteste que les quatre trimestres de 2025 ont été
+  réglés dans l'année (4 × 1.441,87 = 5.767,48, plus la régularisation de
+  3.014,00 de mars). Rien à basculer.
