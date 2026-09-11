@@ -39,14 +39,29 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de
   la société.
-- **ENGIE, Telenet, Proximus, Farys** : adresse de fourniture identique à
-  l'adresse privée du gérant. Vérifier au nom de qui sortent les factures.
+- **ENGIE : facture au nom du gérant, et gaz de chauffage domestique.** La
+  facture 709 293 509 513 du 08-12-2025 est établie au nom de « Dhr. Thibault
+  Duchène », pas de la société, pour l'adresse de fourniture Moorselsteenweg 65
+  à Sterrebeek — le domicile privé. Elle couvre **deux EAN** : électricité
+  (100,16 hors TVA) et **gaz (148,37 hors TVA)**, soit 60 % du montant. La
+  société paie donc l'énergie du domicile du gérant, sur une facture à son nom.
+  Point le plus lourd de la liste : 3.480,42 sur l'exercice.
+- **Proximus : facture au nom de la société**, avec son numéro de TVA
+  (BE 0734.616.335) — rien à redire de ce côté.
+- **Farys** : même question que pour ENGIE, à vérifier.
 
-## 4. Électricité — acomptes et décompte
+## 4. Énergie — acomptes et décompte
 
-Les 3.480,42 payés en 2025 sont des acomptes mensuels, sauf les 356,79 du
-19-07 qui sont le décompte annuel. La charge réelle de l'exercice dépend du
-décompte à venir : cut-off à valider.
+Les 3.480,42 payés en 2025 sont des acomptes mensuels (« voorschotfactuur »),
+sauf les 356,79 du 19-07 qui sont le décompte annuel. La charge réelle de
+l'exercice dépend du décompte à venir : cut-off à valider.
+
+La facture de décembre confirme que **le contrat d'un an s'est terminé le
+16-12-2025**. Un décompte de fin de période doit donc exister : il n'apparaît
+sur aucun extrait de 2026 jusqu'en août. À réclamer à ENGIE.
+
+Elle confirme aussi les **7,50 de frais de rappel** mentionnés au verso, ce qui
+valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
 
 ## 5. Facturation Lambermont
 
