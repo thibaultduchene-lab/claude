@@ -44,6 +44,9 @@ PHOTOS = [
 ENGIE = "Facture ENGIE en main"
 PARTENA = "Décompte Partena en main"
 TELENET = "Facture Telenet en main"
+PROXIMUS = "Facture Proximus en main, chargée dans Billtobox"
+PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
+               "avec sa note de crédit")
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
 PRECOMPTE = "Fiche de précompte — déjà chargée dans Billtobox"
 
@@ -79,6 +82,12 @@ JUSTIFICATIFS = [
  ('Juin', "Telenet", 155.52, TELENET),
  ('Juillet', "Telenet", 153.42, TELENET),
  ('Septembre', "Telenet", 153.42, TELENET),
+ ("Juillet",   "Proximus", 109.59, PROXIMUS),
+ ("Septembre", "Proximus", 70.62,  PROXIMUS_NC),
+ ("Septembre", "Proximus", 161.83, PROXIMUS_NC),
+ ("Octobre",   "Proximus", 148.72, PROXIMUS),
+ ("Novembre",  "Proximus", 143.48, PROXIMUS),
+ ("Décembre",  "Proximus", 153.79, PROXIMUS),
  ("Février",   "Partena", 1441.87, PARTENA),
  ("Mars",      "Partena", 3014.00, PARTENA),
  ("Juin",      "Partena", 1441.87, PARTENA),
