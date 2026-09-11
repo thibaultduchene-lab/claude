@@ -63,6 +63,19 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   pas enregistré sur ce compte publicitaire, donc TVA irlandaise probablement
   facturée et irrécupérable.
 
+- **Avances privées remboursées en entier : pas de justificatif demandé.**
+  Le billet Air Europa Lima-Bruxelles (1.683,78 payé le 13-04, remboursé par
+  Thibault le 23-04) et le séjour Sandaya Lyon (1.775,40 payé le 11-07,
+  remboursé le 22-07) sont des dépenses privées passées par le compte de la
+  société et rendues au centime quelques jours plus tard. La colonne Facture
+  reçoit un X : l'extrait bancaire prouve l'aller et le retour.
+  **À valider par BDH :** ces deux paires devraient passer par le compte
+  courant du gérant, et non en charge d'un côté et en produit de l'autre.
+  Comptabilisées en charge/produit, elles gonflent de 3.459,18 les charges
+  *et* les produits sans toucher au résultat, ce qui fausse le chiffre
+  d'affaires. Même remarque pour l'achat Decathlon refacturé au RTC
+  Lambermont (123,00) et le double paiement Electrabel (256,99).
+
 ## 4. Énergie — acomptes et décompte
 
 Les 3.480,42 payés en 2025 sont des acomptes mensuels (« voorschotfactuur »),

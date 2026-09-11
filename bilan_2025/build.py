@@ -49,6 +49,12 @@ SANS_FACTURE = {'Carburant', 'Crédit voiture', 'Versement impôts anticipé',
                 'Vlaamse Belastingsdienst - taxe de circulation'}
 PREFIXES_SANS_FACTURE = ('Parking', 'Transport')
 
+# Avances privées payées par la société et remboursées en entier par le gérant
+# quelques jours plus tard : la dépense et l'entrée s'annulent, il n'y a pas de
+# charge à justifier. L'extrait bancaire suffit à prouver le remboursement.
+SANS_FACTURE |= {"Billet d'avion Lima-Bruxelles - Air Europa",
+                 'Séjour Sandaya Lyon'}
+
 
 def sans_facture(libelle):
     return libelle in SANS_FACTURE or str(libelle).startswith(PREFIXES_SANS_FACTURE)
