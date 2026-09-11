@@ -14,7 +14,9 @@
 # Règle confirmée par BDH : c'est la DATE DE FACTURE qui commande, pas la date
 # de paiement. En conséquence, trois factures BDH datées de 2024 mais payées le
 # 30-01-2025 sortent de janvier (1.657,70), et deux factures datées de 2025 mais
-# payées début 2026 entrent en décembre (BDH 1.179,75 et FedEx 11,84).
+# payées début 2026 entrent en décembre (BDH 1.179,75 et FedEx 11,84). Même
+# raison pour le péage Ulys débité le 20-01-2025 (27,90) : la facture, qui
+# porte la consommation de décembre 2024, est elle aussi datée de 2024.
 
 DEC25 = "Payé le 04/05-01-2026 mais rattaché à décembre 2025 (même règle qu'en 2024)"
 
@@ -26,6 +28,8 @@ MOIS.append(("Janvier", {
  #   entrée  LAM2415 4.743,17
  #   dépenses Repas Topogigio 26,00 / Précompte salarial déc. 2024 2.250,00 /
  #            SD Worx 330,88 / Electrabel 256,99 / Telenet 149,10 / Proximus 82,99
+ # Exclus car la facture est datée de 2024 (règle de la date de facture) :
+ #   Frais comptable BDH 1.657,70 (trois factures) / Péage Ulys 27,90
  "entrees": [
     ("LAM2501", 5328.20, ""),
     ("LAM2502", 7000.00, ""),
@@ -47,7 +51,6 @@ MOIS.append(("Janvier", {
     ("Telenet",                                           159.10, "Facture 308/8521/00268"),
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
     ("Carburant",                                         71.13, "Cora Woluwe Carburant"),
-    ("Péage autoroute France",                            27.90, "Domiciliation Autoroutes du Sud de la France"),
     ("Parking",                                           7.20, "Parking Rogier"),
     ("Parking",                                           2.68, ""),
     ("Billets d'avion Pérou - Translatina Travel",        1100.00, "Avance - remboursé plus tard"),

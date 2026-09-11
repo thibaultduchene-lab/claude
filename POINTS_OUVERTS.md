@@ -98,8 +98,9 @@ valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
 - Entrées au bilan 2025 : la facture BDH 20250542 (1.179,75) payée le
   28-01-2026 et la facture FedEx 799056072 du 23-12-2025 (11,84) payée le
   10-02-2026. Les deux quittent le bilan 2026.
-- Résultat 2025 : de +2.915,81 à **+3.381,92**. Résultat 2026 provisoire :
-  de −284,70 à **+906,89**.
+- Résultat 2025 : de +2.915,81 à +3.381,92, puis à **+3.409,82** après la
+  sortie du péage Ulys (voir plus bas). Résultat 2026 provisoire : de −284,70
+  à **+906,89**.
 - La facture BDH 20250542 est placée en décembre 2025 : validé par Thibault
   le 11-09-2026.
 - **À vérifier au fil des pièces qui arrivent** : toute facture datée de 2025
@@ -116,3 +117,15 @@ valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
   payé le 18-11-2025, et atteste que les quatre trimestres de 2025 ont été
   réglés dans l'année (4 × 1.441,87 = 5.767,48, plus la régularisation de
   3.014,00 de mars). Rien à basculer.
+- **Farys : vérifié.** Quatre factures 2025 (290,00 en février, 290,00 en mai,
+  300,00 en septembre, 172,14 en octobre), toutes datées de 2025.
+- **AG Insurance : vérifié.** Prime trimestrielle de la police 037524039,
+  échéances des 10-01, 10-04, 10-07 et 10-10-2025 (431,25 × 2 puis 458,66 × 2,
+  la prime ayant été relevée au 3e trimestre). L'échéance du 10-01-2026 est
+  bien sur 2026. Rien à basculer.
+- **Ulys / ASF (péages) : une ligne sortie.** Le prélèvement de 27,90 du
+  20-01-2025 couvre la consommation de décembre 2024 et la facture est datée
+  de 2024 (confirmé par Thibault le 11-09-2026) : la ligne quitte le bilan
+  2025. Les trois autres (34,40 juin, 73,90 juillet, 101,20 août) restent.
+  À signaler : ces 27,90 ne figurent dans aucun des deux bilans, le bilan 2024
+  ayant été établi sur la date de paiement.
