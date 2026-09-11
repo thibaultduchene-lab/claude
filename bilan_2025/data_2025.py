@@ -317,7 +317,7 @@ MOIS.append(("Septembre", {
  "depenses": [
     ("Partena",                                           1441.87, "Cotisation trimestrielle — facture 425/0896/51742"),
     ("Electrabel",                                        263.44, "Facture 412/3802/96359"),
-    ("Telenet",                                           153.42, "Facture 310/7313/00668"),
+    ("Telenet",                                           153.42, "Facture 310/7313/00668 — dernière facture Telenet (août 2025), plus aucune ensuite"),
     ("Carburant",                                         65.14, "Q8 Tervuren"),
     ("Précompte salarial août 2025 Thibault Duchène",     2250.00, ""),
     ("SD Worx",                                           331.79, ""),

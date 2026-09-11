@@ -85,5 +85,9 @@ décompte à venir : cut-off à valider.
   le 11-09-2026.
 - **À vérifier au fil des pièces qui arrivent** : toute facture datée de 2025
   payée en 2026, ou datée de 2024 payée en 2025, doit suivre le même chemin.
-  Les candidats sont les fournisseurs récurrents (Electrabel, Farys, Proximus)
-  dont les paiements de début 2026 pourraient couvrir des factures de fin 2025.
+  Les candidats sont les fournisseurs récurrents (Electrabel, Farys, Proximus,
+  Partena, assurance voiture) dont les paiements de début 2026 pourraient
+  couvrir des factures de fin 2025.
+- **Telenet : réglé.** La dernière facture date d'août 2025, payée le
+  01-09-2025. L'absence de paiement d'octobre à décembre est normale, il n'y a
+  rien à récupérer.
