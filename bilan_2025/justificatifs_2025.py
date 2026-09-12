@@ -52,6 +52,7 @@ PROXIMUS_NC = ("Facture Proximus en main, chargée dans Billtobox "
 INDIGO = ("Facture Indigo School FA002548 du 18-09-2025, au nom de MT Cosmetics Belgium (TVA BE0734616335), chargée dans Billtobox — formation onglerie 3 jours, 520,66 HT + 109,34 TVA récupérable")
 MEDIAMARKT = "Facture Media Markt en main (achat du 03-11-2025)"
 PODOMED = ("Facture Podomed 2025-30 du 26-12-2025, au nom de MT Cosmetics Belgium — une seule facture pour les deux paiements (bilan 65,00 + semelles 210,00), TVA 0 %")
+BELLISSIMO = "Facture New BS (Bellissimo Sport) du 04-03-2025 en main"
 ULYS = "Facture Ulys/ASF en main"
 TRANSLATINA = "Facture Translatina Travel en main — rattachement privé/société à trancher"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
@@ -102,6 +103,7 @@ JUSTIFICATIFS = [
  ("Novembre",  "Achat - Media Markt", 39.00,  MEDIAMARKT),
  ("Novembre",  "Semelles orthopédiques de travail - Podomed", 65.00,  PODOMED),
  ("Décembre",  "Semelles orthopédiques de travail - Podomed", 210.00, PODOMED),
+ ("Mars",      "Achat vêtements de tennis - Bellissimo Sport", 290.50, BELLISSIMO),
  ("Juillet",   "Péage autoroute France", 34.40,  ULYS),
  ("Août",      "Péage autoroute France", 73.90,  ULYS),
  ("Septembre", "Péage autoroute France", 101.20, ULYS),
