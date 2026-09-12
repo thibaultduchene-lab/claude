@@ -91,6 +91,26 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   pour des frais de transport de ce montant, ou faut-il rejeter les 157,21 ?
   Coût fiscal du rejet : 31 à 39.
 
+- **Trente petites dépenses sans ticket — 416,57.** La carte de société a été
+  prêtée à Miriam Prudencio Garces et les tickets n'ont pas été conservés
+  (signalé par Thibault le 12-09-2026). Les lignes portent un **X** dans la
+  colonne Facture, mais surlignées en jaune et assorties de la mention
+  « Ticket non conservé — pièce manquante » : ce X ne veut pas dire que le
+  comptable dispense du justificatif, seulement qu'il n'y en aura pas.
+  Les plus élevées : Zara Bruxelles 84,05 · Flying Tiger 81,00 · Delhaize
+  Sterrebeek 43,43 · Proxy Meiser 33,84 · Oris Group Waterloo 25,63. Le reste
+  se compose de collations, de sanitaires d'autoroute et de courses, de 0,80
+  à 24,46.
+  **Deux questions pour BDH.** D'abord, ces dépenses sont-elles des charges de
+  la société ? Une carte prêtée à un tiers qui l'utilise librement plaide
+  plutôt pour le compte courant du gérant que pour la charge déductible, et
+  certaines lignes sont manifestement privées — la coiffure à 10,00 du 11-04
+  ne peut être que privée, les vêtements Zara et les courses Delhaize ou
+  Carrefour sont douteux. Ensuite, faut-il les rejeter en bloc ou au cas par
+  cas ? Coût fiscal d'un rejet total : 83 à 104.
+  **Pour l'avenir :** ne plus prêter la carte de société, ou exiger le ticket
+  à chaque usage.
+
 ## 3. Pièces au nom d'un tiers
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de

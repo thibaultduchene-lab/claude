@@ -34,7 +34,8 @@ def charger(module, defauts):
 MOIS = importlib.import_module(f'data_{ANNEE}').MOIS
 DECOMPTES, DECOMPTES_MC = charger(f'cartes_{ANNEE}',
                                   [('DECOMPTES', {}), ('DECOMPTES_MC', {})])
-(JUSTIFICATIFS,) = charger(f'justificatifs_{ANNEE}', [('JUSTIFICATIFS', [])])
+JUSTIFICATIFS, SANS_TICKET = charger(f'justificatifs_{ANNEE}',
+                                     [('JUSTIFICATIFS', []), ('SANS_TICKET', [])])
 COLS = 'EFGHIJKL'
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
 LARGEUR_MAX = 60               # largeur max des colonnes Remarque
@@ -184,7 +185,31 @@ manquants = set(attendus) - trouves
 if manquants:
     raise SystemExit(f'justificatif sans ligne correspondante : {manquants}')
 
-n_x = 0
+# Tickets perdus : un X, mais accompagné d'une remarque et d'un surlignage —
+# sans quoi il se confondrait avec les postes que le comptable dispense de
+# justificatif, ce qui laisserait croire la question réglée.
+PERDU = "Ticket non conservé — pièce manquante, à trancher avec le comptable"
+perdus = {(m, lib, round(mnt, 2)) for m, lib, mnt in SANS_TICKET}
+vus = set()
+n_perdus = 0
+mois_courant = ''
+for row in range(first_data_row, r):
+    if ws[f'E{row}'].value:
+        mois_courant = ws[f'E{row}'].value
+    cle = (mois_courant, ws[f'I{row}'].value, round(ws[f'J{row}'].value or 0, 2))
+    if cle not in perdus or ws[f'K{row}'].value:
+        continue
+    ws[f'K{row}'] = 'X'
+    ancienne = ws[f'L{row}'].value
+    ws[f'L{row}'] = f'{ancienne} — {PERDU}' if ancienne else PERDU
+    for c in 'IJKL':
+        ws[f'{c}{row}'].fill = JAUNE
+    vus.add(cle)
+    n_perdus += 1
+if perdus - vus:
+    raise SystemExit(f'ticket perdu sans ligne correspondante : {perdus - vus}')
+
+n_x = n_perdus
 for row in range(first_data_row, r):
     if sans_facture(ws[f'I{row}'].value) and not ws[f'K{row}'].value:
         ws[f'K{row}'] = 'X'
@@ -192,4 +217,5 @@ for row in range(first_data_row, r):
 
 wb.save(OUT)
 print(f'{OUT} écrit — lignes {first_data_row} à {last}, totaux ligne {r}, '
-      f'{n_jaune} cellules surlignées, {len(trouves)} justificatif(s) rattaché(s)')
+      f'{n_jaune + n_perdus} cellules surlignées, {len(trouves)} justificatif(s) '
+      f'rattaché(s), {n_perdus} ticket(s) perdu(s)')

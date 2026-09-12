@@ -170,3 +170,39 @@ JUSTIFICATIFS = [
 
 # Tickets reçus sans ligne correspondante dans le bilan — à trancher :
 #   2025-12-23 FedEx 11,84            : facture de fin décembre, payée en 2026
+
+# Tickets perdus : la carte de société a été prêtée à Miriam Prudencio Garces
+# et les tickets n'ont pas été conservés. La colonne Facture reçoit un X faute
+# de mieux, mais la remarque et le surlignage disent que la pièce manque.
+SANS_TICKET = [
+  ('Janvier', 'Collation - Plouf et Baballe', 8.4),
+  ('Avril', 'Divers - Blitha Vereycken, Anvers', 2.5),
+  ('Avril', 'Repas - Paul, métro Montgomery', 4.9),
+  ('Avril', 'Collation - Shop Metro Montgomery', 6.48),
+  ('Avril', 'Achat - Flying Tiger Bruxelles', 81),
+  ('Avril', 'Divers - sanitaires autoroute', 1.5),
+  ('Avril', 'Divers - sanitaires autoroute', 1.5),
+  ('Avril', 'Collation - Intermarché Bruxelles', 3.58),
+  ('Avril', 'Achat - Oris Group, Waterloo', 25.63),
+  ('Avril', 'Achat - Fnac Woluwe', 1.09),
+  ('Avril', 'Achat vêtements - Zara Bruxelles', 84.05),
+  ('Avril', 'Achat - commerçant 2419 Bruxelles', 2.89),
+  ('Avril', 'Repas Quick Kraainem', 10.45),
+  ('Avril', 'Collation - Naki Ixelles', 3),
+  ('Avril', 'Divers - sanitaires autoroute', 1),
+  ('Avril', 'Divers - sanitaires autoroute', 1),
+  ('Avril', 'Collation', 0.8),
+  ('Avril', 'Achat Delhaize', 43.43),
+  ('Mai', 'Coiffure hommes, Schaerbeek', 10),
+  ('Mai', 'Achat - SumUp Schaerbeek', 7.9),
+  ('Mai', 'Achat - Action Schaerbeek', 17.39),
+  ('Mai', 'Achat - Action Bruxelles', 24.46),
+  ('Mai', 'Divers - sanitaires autoroute', 1),
+  ('Mai', 'Divers - sanitaires autoroute', 1),
+  ('Juin', 'Achat - Mood for Green SRL, Bruxelles', 17),
+  ('Juillet', 'Achat Delhaize Wezembeek', 5.67),
+  ('Juillet', 'Achat Delhaize Wezembeek', 0.92),
+  ('Juillet', 'Achat - Carrefour Bruxelles', 4.79),
+  ('Juillet', 'Repas - Dal Long Yi, Bruxelles', 9.4),
+  ('Juillet', 'Achat - Proxy Meiser, Schaerbeek', 33.84),
+]
