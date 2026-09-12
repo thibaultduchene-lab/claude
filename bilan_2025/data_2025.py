@@ -438,7 +438,7 @@ MOIS.append(("Décembre", {
     ("Carburant",                                         63.80, "Q8 Easy Zaventem"),
     ("Parking",                                           6.97, "Parcbrux Ixelles, Gand"),
     ("Parking",                                           7.00, "Parking Station, Bruges"),
-    ("Xerius",                                            399.73, "Cotisations sociales indépendant"),
+    ("Xerius",                                            399.73, "Cotisation annuelle à charge des sociétés ('taxe société') — communication 925/3695/86745, payée le 16-12-2025. Base 347,50 : le surplus de 52,23 est à vérifier — indexation ou majoration de retard ?"),
     ("Electrabel",                                        263.44, "Facture 435/0584/57839"),
     ("Proximus",                                          153.79, "Facture 750/7299/18694"),
     ("Assurance RC - LRS Insurance",                      55.04, "Même montant qu'en 2024 (Liantis)"),
