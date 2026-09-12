@@ -48,10 +48,12 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   sur mesure 210,00), TVA 0 % — exonération paramédicale, rien à récupérer.
   Elle est bien adressée à MT Cosmetics Belgium avec son numéro de TVA, mais
   la rubrique « Patient » porte elle aussi le nom de la société, ce qui n'a
-  pas de sens : le patient est le gérant. Des semelles orthopédiques sont
-  a priori une dépense personnelle, sauf à démontrer qu'elles sont liées à
-  l'exercice de l'activité (coaching debout toute la journée). À trancher :
-  charge déductible, avantage de toute nature, ou compte courant.
+  pas de sens : le patient est le gérant.
+  **Lien professionnel établi** (Thibault, 12-09-2026) : il est entraîneur de
+  tennis, debout et en déplacement sur le terrain toute la journée. Il s'agit
+  donc d'équipement de travail, ce que confirme l'intitulé « semelles **de
+  travail** sur mesure ». Traité en charge déductible ; signalé à BDH pour
+  information, sans question ouverte.
 
 ## 3. Pièces au nom d'un tiers
 
