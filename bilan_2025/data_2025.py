@@ -275,7 +275,7 @@ MOIS.append(("Juillet", {
     ("Amende de stationnement - Saint-Josse",             100.00, "Amende — dépense non admise, comm. 500/2300/37391"),
     ("Carburant",                                         60.90, "Maes Schaerbeek"),
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
-    ("Repas Topogigio",                                   231.50, "Bar du RTCL Lambermont — ardoise tenue sur papier par le gérant du bar puis encodée en une fois le 25-07 à 15:05 : 85 pièces (sodas, gaufres, chips, croque-monsieur). Ticket de 251,50 pour 231,50 débités via SumUp"),
+    ("Repas Topogigio",                                   231.50, "Bar du RTCL Lambermont — ardoise de plusieurs semaines, tenue sur papier par le gérant du bar puis encodée en une fois le 25-07 à 15:05 : 85 pièces (sodas, gaufres, chips, croque-monsieur). Ticket de 251,50 pour 231,50 débités via SumUp"),
     ("Carburant",                                         43.01, "Esso Rumst"),
     ("Parking",                                           1.70, "Indigo, Tours (France)"),
     ("Parking",                                           2.80, "Commune de Soulac-sur-Mer (France)"),
