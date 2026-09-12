@@ -441,7 +441,7 @@ MOIS.append(("Décembre", {
     ("Xerius",                                            399.73, "Cotisation annuelle à charge des sociétés ('taxe société') — communication 925/3695/86745, payée le 16-12-2025. Base 347,50 : le surplus de 52,23 est à vérifier — indexation ou majoration de retard ?"),
     ("Electrabel",                                        263.44, "Facture 435/0584/57839"),
     ("Proximus",                                          153.79, "Facture 750/7299/18694"),
-    ("Assurance RC - LRS Insurance",                      55.04, "Même montant qu'en 2024 (Liantis)"),
+    ("Assurance RC - LRS Insurance",                      55.04, "RC professionnelle — prime annuelle payée le 16-12-2025, communication 025/0074/58347. Même montant qu'en 2024, où le courtier était Liantis"),
     ("Carburant",                                         63.20, "Q8 Easy Zaventem"),
     ("Parking",                                           3.70, "Q-Park Woluwe Esplanade"),
     ("Parking",                                           1.60, "Woluwe-Saint-Lambert"),
