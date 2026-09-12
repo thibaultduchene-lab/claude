@@ -35,6 +35,14 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   Oris Group 25,63, Mood for Green 17,00, SumUp 7,90, Blitha Vereycken 2,50,
   commerçant « 2419 » 2,89.
 
+- **Media Markt : un ordinateur, donc un investissement.** 748,00 le
+  03-11-2025 à 12:33, plus 39,00 deux minutes plus tard (accessoire ou
+  garantie). Factures en main. À 748, le PC relève normalement de
+  l'immobilisation amortie sur trois à cinq ans, et non de la charge de
+  l'exercice : à trancher par BDH, avec la part d'usage professionnel à
+  retenir (TVA et amortissement). L'enjeu sur le résultat 2025 est de l'ordre
+  de 500 à 700 selon la durée et le prorata retenus.
+
 ## 3. Pièces au nom d'un tiers
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de

@@ -393,8 +393,8 @@ MOIS.append(("Novembre", {
  "entrees": [],   # aucun encaissement ce mois-ci
  "depenses": [
     ("Carburant",                                         65.29, "Q8 Easy Zaventem"),
-    ("Achat - Media Markt",                               748.00, "Woluwe-Saint-Lambert — nature de l'achat à préciser"),
-    ("Achat - Media Markt",                               39.00, "Woluwe-Saint-Lambert — nature de l'achat à préciser"),
+    ("Achat - Media Markt",                               748.00, "Ordinateur acheté le 03-11-2025 à 12:33 — investissement à amortir plutôt que charge de l'exercice, à trancher avec BDH"),
+    ("Achat - Media Markt",                               39.00, "Même passage en caisse, à 12:35 — accessoire ou garantie : à trancher avec le PC — intégré à sa valeur ou laissé en charge"),
     ("Précompte salarial octobre 2025 Thibault Duchène",  2250.00, ""),
     ("SD Worx",                                           331.85, ""),
     ("Crédit voiture",                                    724.12, ""),

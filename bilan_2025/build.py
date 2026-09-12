@@ -64,7 +64,7 @@ def sans_facture(libelle):
 FORCER_JAUNE = {"Billets d'avion Pérou - Translatina Travel"}
 
 A_TRANCHER = re.compile(
-    r"à (confirmer|identifier|préciser|vérifier|valider|joindre|traiter)"
+    r"à (confirmer|identifier|préciser|vérifier|valider|joindre|traiter|trancher|amortir)"
     r"|sans numéro|privée|compte courant|documenter|\?", re.I)
 
 
