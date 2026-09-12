@@ -43,6 +43,16 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   retenir (TVA et amortissement). L'enjeu sur le résultat 2025 est de l'ordre
   de 500 à 700 selon la durée et le prorata retenus.
 
+- **Podomed : soin paramédical facturé à la société.** Facture 2025-30 du
+  26-12-2025, 275,00 (bilan et prise de mesures 65,00 + semelles de travail
+  sur mesure 210,00), TVA 0 % — exonération paramédicale, rien à récupérer.
+  Elle est bien adressée à MT Cosmetics Belgium avec son numéro de TVA, mais
+  la rubrique « Patient » porte elle aussi le nom de la société, ce qui n'a
+  pas de sens : le patient est le gérant. Des semelles orthopédiques sont
+  a priori une dépense personnelle, sauf à démontrer qu'elles sont liées à
+  l'exercice de l'activité (coaching debout toute la journée). À trancher :
+  charge déductible, avantage de toute nature, ou compte courant.
+
 ## 3. Pièces au nom d'un tiers
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de
