@@ -40,7 +40,8 @@ COLS = 'EFGHIJKL'
 BLANK_AFTER_MONTH = 2          # comme en 2024 : 2 lignes vides entre les mois
 LARGEUR_MAX = 60               # largeur max des colonnes Remarque
 LARGEURS = {'E': 10.29, 'F': 32.29, 'G': 9.0, 'I': 47.29, 'J': 8.43, 'K': 7.71}
-JAUNE = PatternFill('solid', fgColor='FFFF00')
+JAUNE = PatternFill('solid', fgColor='FFFF00')    # il manque une pièce
+ORANGE = PatternFill('solid', fgColor='FFC000')   # arbitrage à trancher
 
 # Postes pour lesquels le comptable ne demande pas de justificatif : la colonne
 # Facture reçoit un X, comme en 2024. Carburant, parkings, transports en commun,
@@ -155,17 +156,6 @@ for col in 'HL':               # les deux colonnes Remarque, avec retour à la l
 for idx in [i for i in ws.row_dimensions if i > r]:   # hauteurs résiduelles du modèle
     del ws.row_dimensions[idx]
 
-# 6. surligner en jaune les lignes qui demandent un arbitrage
-n_jaune = 0
-for row in range(first_data_row, r):
-    for rem_col, cols, src_col in (('H', 'FGH', 'F'), ('L', 'IJL', 'I')):
-        rem = ws[f'{rem_col}{row}'].value
-        if (rem and A_TRANCHER.search(str(rem))) or ws[f'{src_col}{row}'].value in FORCER_JAUNE:
-            for c in cols:
-                ws[f'{c}{row}'].fill = JAUNE
-            n_jaune += 1
-ws['D5'] = 'Surligné en jaune = à trancher avec le comptable'
-
 # 7. colonne Facture : V sur les lignes dont le justificatif est en main
 attendus = {(mois, lib, round(mnt, 2)): pdf for mois, lib, mnt, pdf in JUSTIFICATIFS}
 trouves = set()
@@ -188,7 +178,7 @@ if manquants:
 # Tickets perdus : un X, mais accompagné d'une remarque et d'un surlignage —
 # sans quoi il se confondrait avec les postes que le comptable dispense de
 # justificatif, ce qui laisserait croire la question réglée.
-PERDU = "Ticket non conservé — pièce manquante, à trancher avec le comptable"
+PERDU = "Ticket non conservé — pièce manquante"
 perdus = {(m, lib, round(mnt, 2)) for m, lib, mnt in SANS_TICKET}
 vus = set()
 n_perdus = 0
@@ -202,8 +192,6 @@ for row in range(first_data_row, r):
     ws[f'K{row}'] = 'X'
     ancienne = ws[f'L{row}'].value
     ws[f'L{row}'] = f'{ancienne} — {PERDU}' if ancienne else PERDU
-    for c in 'IJKL':
-        ws[f'{c}{row}'].fill = JAUNE
     vus.add(cle)
     n_perdus += 1
 if perdus - vus:
@@ -215,7 +203,36 @@ for row in range(first_data_row, r):
         ws[f'K{row}'] = 'X'
         n_x += 1
 
+# 8. couleurs : jaune quand une pièce manque, orange quand il faut trancher.
+# Une ligne peut être les deux ; l'orange l'emporte, parce que la pièce
+# manquante se voit déjà à la colonne Facture restée vide.
+def arbitrage(rem, source):
+    return bool(rem and A_TRANCHER.search(str(rem))) or source in FORCER_JAUNE
+
+n_orange = n_manque = 0
+for row in range(first_data_row, r):
+    # entrées : pas de colonne Facture, donc seul l'arbitrage les concerne
+    if arbitrage(ws[f'H{row}'].value, ws[f'F{row}'].value):
+        for c in 'FGH':
+            ws[f'{c}{row}'].fill = ORANGE
+        n_orange += 1
+    if not ws[f'I{row}'].value:
+        continue
+    manque = not ws[f'K{row}'].value or ws[f'K{row}'].value == 'X' and PERDU in str(ws[f'L{row}'].value)
+    if arbitrage(ws[f'L{row}'].value, ws[f'I{row}'].value):
+        couleur, n_orange = ORANGE, n_orange + 1
+    elif manque:
+        couleur, n_manque = JAUNE, n_manque + 1
+    else:
+        continue
+    for c in 'IJKL':
+        ws[f'{c}{row}'].fill = couleur
+
+ws['D5'] = ('Jaune = pièce manquante  ·  Orange = à trancher avec le comptable')
+
 wb.save(OUT)
 print(f'{OUT} écrit — lignes {first_data_row} à {last}, totaux ligne {r}, '
-      f'{n_jaune + n_perdus} cellules surlignées, {len(trouves)} justificatif(s) '
-      f'rattaché(s), {n_perdus} ticket(s) perdu(s)')
+      f'{n_manque} pièce(s) manquante(s) en jaune, '
+      f'{n_orange} arbitrage(s) en orange, '
+      f'{len(trouves)} justificatif(s) rattaché(s), '
+      f'{n_perdus} ticket(s) perdu(s)')
