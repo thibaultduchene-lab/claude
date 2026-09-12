@@ -75,6 +75,22 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   celui repris au bilan — aucun risque de sur-déduction, mais l'écart mérite
   un mot d'explication du club si BDH le relève.
 
+- **FedEx : quatre factures ne seront pas récupérées** (décision de Thibault,
+  12-09-2026). Le compte FedEx est au nom de Miriam Prudencio Garces et les
+  documents ne sont pas accessibles. Les quatre paiements sont toutefois
+  identifiés sans ambiguïté par la communication de chaque virement, qui porte
+  le numéro de facture :
+  - 03-01-2025, 5,69 — facture **798661469**
+  - 05-03-2025, 48,67 — facture **798748628**
+  - 10-03-2025, 97,34 — facture **798752501**
+  - 04-07-2025, 5,51 — facture **798875231**
+  Bénéficiaire : FedEx Express BE BV, BE34 7370 4865 9990. Total 157,21.
+  Deux autres factures FedEx de 2025 sont bien en main (17,37 en octobre,
+  11,84 en décembre), ce qui atteste de la réalité de la relation commerciale.
+  **À trancher par BDH :** l'extrait portant le numéro de facture suffit-il
+  pour des frais de transport de ce montant, ou faut-il rejeter les 157,21 ?
+  Coût fiscal du rejet : 31 à 39.
+
 ## 3. Pièces au nom d'un tiers
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de
