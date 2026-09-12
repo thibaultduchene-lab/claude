@@ -241,3 +241,34 @@ valide la lecture de la double facture de novembre (270,94 = 263,44 + 7,50).
   facture dans Billtobox le 11-09-2026 : c'est à BDH de décider s'il la
   rattache à 2024, à 2025, ou s'il la laisse tomber. Même situation pour les
   trois factures BDH de 2024 (1.657,70), où l'enjeu est autrement plus lourd.
+
+## 8. Organisation pour 2026 — passer en facturation électronique
+
+Les pièces 2025 se sont réparties en deux camps très nets, et c'est le second
+qui a coûté tout le temps de recherche.
+
+**Récupérées en quelques clics, en ligne :** ENGIE, Proximus, Telenet, Farys,
+Partena, SD Worx, Ulys/ASF, Shopify, Indigo School.
+
+**Arrivées sur papier, donc à redemander une par une :** AG Insurance (4 avis
+d'échéance, 1.779,82), Xerius (cotisation annuelle société, 399,73), LRS
+Insurance (RC professionnelle, 55,04). Ces trois-là ont été payées par
+virement encodé à la main — le 16-12-2025 pour Xerius et LRS, le même jour,
+signe qu'elles étaient posées sur le bureau sous forme papier. Les documents
+ont été jetés après paiement, dans l'idée qu'ils seraient retrouvables en
+ligne ; ils ne l'étaient pas.
+
+**À faire pour l'exercice 2026 :**
+- demander à **AG Insurance**, **Xerius** et **LRS Insurance** l'envoi
+  électronique des avis et quittances, et noter le numéro de police ou de
+  dossier de chacun ;
+- ouvrir un accès en ligne chez ceux qui en proposent un, ou à défaut faire
+  adresser les documents à une adresse mail dédiée ;
+- ne plus jeter une pièce papier avant de l'avoir chargée dans Billtobox : la
+  photographier suffit, le format PDF a très bien fonctionné cette année.
+
+Références utiles à conserver :
+- AG Insurance — police 037524039, mandat de domiciliation 303347978
+- Xerius — communication 925/3695/86745, compte BE13 4100 6416 7139
+- LRS Insurance — communication 025/0074/58347, compte BE37 7360 3695 3428
+- Ulys / ASF — contrat 0046686176
