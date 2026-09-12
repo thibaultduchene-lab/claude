@@ -59,7 +59,13 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   tickets le montrent : le 23-04 à 16:09, 12 pièces (sodas et gaufres) ; le
   25-07 à 15:05, **85 pièces** — 29 Coca-Cola, 15 Coca Zero, 11 gaufres, des
   chips, des croque-monsieur. Ce sont les consommations d'un groupe lors d'une
-  journée au club, pas un repas d'affaires. À qualifier par BDH : frais de
+  journée au club, pas un repas d'affaires.
+  **Mode de fonctionnement du bar** (Thibault, 12-09-2026) : le gérant du bar
+  notait les consommations sur un papier au fil du temps, puis les encodait
+  toutes d'un coup sur un seul ticket. Un ticket de 85 pièces ne correspond
+  donc pas à une seule consommation mais à une ardoise cumulée — ce qui
+  explique aussi les écarts avec les montants débités, des articles ayant pu
+  être retirés ou réglés autrement au moment de l'encodage. À qualifier par BDH : frais de
   restaurant déductibles à 69 %, ou coût direct d'un stage ou d'un tournoi
   organisé par la société, auquel cas la déduction est entière.
 - **Écart entre les tickets du club et les montants débités.** Trois fois sur
