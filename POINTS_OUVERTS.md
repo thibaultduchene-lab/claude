@@ -115,19 +115,16 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de
   la société.
-- **ENGIE : facture au nom du gérant, et gaz de chauffage domestique.** La
-  facture 709 293 509 513 du 08-12-2025 est établie au nom de « Dhr. Thibault
-  Duchène », pas de la société, pour l'adresse de fourniture Moorselsteenweg 65
-  à Sterrebeek — le domicile privé. Elle couvre **deux EAN** : électricité
-  (100,16 hors TVA) et **gaz (148,37 hors TVA)**, soit 60 % du montant. La
-  société paie donc l'énergie du domicile du gérant, sur une facture à son nom.
-  Point le plus lourd de la liste : 3.480,42 sur l'exercice.
-  **Nuance apportée le 12-09-2026 :** la facture Indigo School FA002548 est
-  adressée à « MT COSMETICS BELGIUM, BE0734616335, Moorselsteenweg 65, 1933
-  Sterrebeek » — la même adresse. C'est donc aussi l'adresse de la société, et
-  pas seulement le domicile privé. La question n'est plus de savoir si une part
-  de l'énergie est professionnelle, mais **quelle part**, et il reste à obtenir
-  de ENGIE une facture au nom de la société.
+- **ENGIE : rien à arbitrer, BDH connaît le dossier.** La facture
+  709 293 509 513 du 08-12-2025 est au nom de « Dhr. Thibault Duchène » pour
+  l'adresse Moorselsteenweg 65 à Sterrebeek, qui est à la fois le domicile du
+  gérant et l'adresse de la société. Elle couvre deux EAN : électricité
+  (100,16 hors TVA) et gaz (148,37 hors TVA). Total payé sur l'exercice :
+  **3.480,42**.
+  Thibault a confirmé le 12-09-2026 que BDH applique depuis des années une clé
+  de répartition connue entre usage privé et professionnel, et sait ce qui est
+  au nom de la société et ce qui est au sien. **Ce point est donc repris ici
+  pour information et pour le montant de l'exercice, pas comme une question.**
 - **Proximus : facture au nom de la société**, avec son numéro de TVA
   (BE 0734.616.335) — rien à redire de ce côté.
 - **Partena : au nom du gérant, et c'est normal.** L'avis d'échéance du
