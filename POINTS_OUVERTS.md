@@ -46,6 +46,12 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   (100,16 hors TVA) et **gaz (148,37 hors TVA)**, soit 60 % du montant. La
   société paie donc l'énergie du domicile du gérant, sur une facture à son nom.
   Point le plus lourd de la liste : 3.480,42 sur l'exercice.
+  **Nuance apportée le 12-09-2026 :** la facture Indigo School FA002548 est
+  adressée à « MT COSMETICS BELGIUM, BE0734616335, Moorselsteenweg 65, 1933
+  Sterrebeek » — la même adresse. C'est donc aussi l'adresse de la société, et
+  pas seulement le domicile privé. La question n'est plus de savoir si une part
+  de l'énergie est professionnelle, mais **quelle part**, et il reste à obtenir
+  de ENGIE une facture au nom de la société.
 - **Proximus : facture au nom de la société**, avec son numéro de TVA
   (BE 0734.616.335) — rien à redire de ce côté.
 - **Partena : au nom du gérant, et c'est normal.** L'avis d'échéance du
@@ -53,6 +59,12 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   et débité du compte de la société. Traitement habituel pour des cotisations
   sociales de dirigeant, mais à signaler à BDH.
 - **Farys** : même question que pour ENGIE, à vérifier.
+- **Indigo School : rien à signaler.** La facture FA002548 du 18-09-2025 est
+  bien établie au nom de MT Cosmetics Belgium avec son numéro de TVA. Elle
+  mentionne aussi Miriam Prudencio Garces comme destinataire, la même personne
+  que sur les factures FedEx — c'est vraisemblablement elle qui a suivi la
+  formation. À confirmer qu'elle travaille pour la société.
+  La TVA de 109,34 est en principe récupérable (520,66 HT + 21 %).
 - **Publicité Facebook : compte publicitaire d'un tiers.** Les 27 débits
   d'avril à juillet 2025 (688,03) ont été engagés depuis un compte Facebook
   qui n'est pas celui de Thibault (signalé le 11-09-2026). Les reçus Meta
