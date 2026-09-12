@@ -119,6 +119,30 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   d'affaires. Même remarque pour l'achat Decathlon refacturé au RTC
   Lambermont (123,00) et le double paiement Electrabel (256,99).
 
+- **Un projet unique : la boutique en ligne d'avril à juillet 2025.** Quatre
+  postes du bilan se recoupent et forment un ensemble cohérent plutôt que des
+  dépenses isolées :
+  - **Shopify**, abonnement mensuel de boutique en ligne, du 07-04 au 06-07
+    (96,53 — factures 351488651, 363251007, 375321628, 387615031, facturées
+    en USD d'où les montants variables) ;
+  - **Publicité Facebook**, 27 débits du 01-04 au 01-07 (688,03), exactement
+    la même fenêtre ;
+  - **FedEx**, réceptions et expéditions de marchandise, aux deux factures
+    établies au nom de Miriam Prudencio Garces ;
+  - **Formation Indigo Nails** du 24-09 (630,00), facturée à MT Cosmetics
+    Belgium avec Miriam Prudencio Garces comme destinataire.
+  L'abonnement Shopify commence et s'arrête en même temps que la campagne
+  publicitaire : c'est une boutique lancée au printemps, alimentée par de la
+  publicité, et arrêtée en été. Le compte publicitaire et le compte Shopify
+  sont tous deux ouverts au nom de Miriam Prudencio Garces, la compagne du
+  gérant.
+  **Conséquence pour le point 3 :** le lien professionnel des 688,03 de
+  publicité n'est plus une supposition, il est corroboré par trois autres
+  postes. Reste la question de la forme — des pièces au nom d'un tiers — et
+  celle du rôle exact de Miriam dans la société, que BDH devra clarifier.
+  **Action :** une seule demande à Miriam pour les factures Shopify, les reçus
+  Meta et le nom figurant sur le compte publicitaire — 784,56 d'un coup.
+
 ## 4. Énergie — acomptes et décompte
 
 Les 3.480,42 payés en 2025 sont des acomptes mensuels (« voorschotfactuur »),
