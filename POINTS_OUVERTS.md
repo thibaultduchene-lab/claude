@@ -62,6 +62,17 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   ou la requalifier ? Le numéro de TVA de la société n'est vraisemblablement
   pas enregistré sur ce compte publicitaire, donc TVA irlandaise probablement
   facturée et irrécupérable.
+  Se procurer les reçus est possible mais compliqué, et ils porteront le nom
+  d'un tiers. **Question posée à BDH avant d'engager l'effort** : que faut-il
+  au juste pour que les 688,03 tiennent ?
+  1. les 27 reçus Meta au nom du tiers, plus une attestation écrite de
+     celui-ci confirmant que les campagnes visaient MT Cosmetics ;
+  2. une refacturation du tiers à la société pour le même montant ;
+  3. rien, et les 688,03 sont rejetés en dépense non admise — coût fiscal
+     de 138 à 172 selon le taux applicable.
+  L'élément décisif n'est pas le reçu mais **ce que les campagnes
+  promouvaient** : si c'est la page ou les produits de la société, le lien
+  professionnel est établi.
 
 - **Avances privées remboursées en entier : pas de justificatif demandé.**
   Le billet Air Europa Lima-Bruxelles (1.683,78 payé le 13-04, remboursé par
