@@ -55,6 +55,20 @@ février 2026 puis restitués en trois fois entre mars et mai 2026.
   travail** sur mesure ». Traité en charge déductible ; signalé à BDH pour
   information, sans question ouverte.
 
+- **Topogigio, c'est le bar du RTC Lambermont**, pas un restaurant. Les
+  tickets le montrent : le 23-04 à 16:09, 12 pièces (sodas et gaufres) ; le
+  25-07 à 15:05, **85 pièces** — 29 Coca-Cola, 15 Coca Zero, 11 gaufres, des
+  chips, des croque-monsieur. Ce sont les consommations d'un groupe lors d'une
+  journée au club, pas un repas d'affaires. À qualifier par BDH : frais de
+  restaurant déductibles à 69 %, ou coût direct d'un stage ou d'un tournoi
+  organisé par la société, auquel cas la déduction est entière.
+- **Écart entre les tickets du club et les montants débités.** Trois fois sur
+  quatre, le total imprimé dépasse ce qui a été payé : 79,50 pour 75,50 le
+  05-03 (corrigé à la main sur le ticket), 29,00 pour 26,00 le 23-04, 251,50
+  pour 231,50 le 25-07. La société n'a donc payé que le montant le plus bas,
+  celui repris au bilan — aucun risque de sur-déduction, mais l'écart mérite
+  un mot d'explication du club si BDH le relève.
+
 ## 3. Pièces au nom d'un tiers
 
 - **FedEx** : les deux factures sont au nom de Miriam Prudencio Garces, pas de

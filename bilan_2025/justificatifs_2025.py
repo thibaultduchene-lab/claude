@@ -145,6 +145,8 @@ JUSTIFICATIFS = [
  ("Février",   "Repas Lunch Garden",                                 39.47,  "2025-02-22_LunchGarden-Kraainem_39.47.pdf"),
  ("Février",   "Achat vêtement sport - DECATHLON",                   140.00, "2025-02-25_Decathlon-Evere_140.00.pdf"),
  ("Mars",      "Repas Topogigio",                                    75.50,  "2025-03-05_RTCL-Lambermont_75.50.pdf"),
+ ("Avril",     "Repas Topogigio",                                    26.00,  "2025-04-23_RTCL-Lambermont_29.00.pdf"),
+ ("Juillet",   "Repas Topogigio",                                    231.50, "2025-07-25_RTCL-Lambermont_251.50.pdf"),
  ("Mars",      "Carburant",                                          50.20,  "2025-03-20_Station15-Zemst_50.20.pdf"),
  ("Mars",      "Entretien voiture - Monsieur Pneus",                 919.17, "2025-03-25_MonsieurPneus_919.17.pdf"),
  ("Mars",      "Carburant",                                          16.00,  "2025-03-27_Station15-Zemst_16.00.pdf"),
@@ -167,6 +169,4 @@ JUSTIFICATIFS = [
 ]
 
 # Tickets reçus sans ligne correspondante dans le bilan — à trancher :
-#   2025-04-23 RTCL Lambermont 29,00  : l'extrait ne montre que 26,00 ce jour-là
-#   2025-07-25 RTCL Lambermont 251,50 : l'extrait ne montre que 231,50 (SumUp)
 #   2025-12-23 FedEx 11,84            : facture de fin décembre, payée en 2026
