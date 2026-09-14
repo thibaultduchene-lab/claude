@@ -54,6 +54,7 @@ MEDIAMARKT = "Facture Media Markt en main (achat du 03-11-2025)"
 PODOMED = ("Facture Podomed 2025-30 du 26-12-2025, au nom de MT Cosmetics Belgium — une seule facture pour les deux paiements (bilan 65,00 + semelles 210,00), TVA 0 %")
 BELLISSIMO = "Facture New BS (Bellissimo Sport) du 04-03-2025 en main"
 AG = "Avis d'échéance AG Insurance en main — police 037524039"
+LRS = "Quittance LRS Insurance en main — RC professionnelle"
 ULYS = "Facture Ulys/ASF en main"
 TRANSLATINA = "Facture Translatina Travel en main — rattachement privé/société à trancher"
 SDWORX = "Décompte SD Worx — déjà chargé dans Billtobox"
@@ -109,6 +110,7 @@ JUSTIFICATIFS = [
  ("Avril",     "Assurance voiture", 431.25, AG),
  ("Juillet",   "Assurance voiture", 458.66, AG),
  ("Octobre",   "Assurance voiture", 458.66, AG),
+ ("Décembre",  "Assurance RC - LRS Insurance", 55.04, LRS),
  ("Juillet",   "Péage autoroute France", 34.40,  ULYS),
  ("Août",      "Péage autoroute France", 73.90,  ULYS),
  ("Septembre", "Péage autoroute France", 101.20, ULYS),
